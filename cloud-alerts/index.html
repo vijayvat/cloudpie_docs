@@ -1,0 +1,1284 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../cloud-account-delete/">
+      
+      
+        <link rel="next" href="../workspace-add/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Managing Cloud Alerts - Cloudpie User Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../api/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#managing-alerts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Cloudpie User Guide" class="md-header__button md-logo" aria-label="Cloudpie User Guide" data-md-component="logo">
+      
+  <img src="../images/cloudpie_black_logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Cloudpie User Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Managing Cloud Alerts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Cloudpie User Guide" class="md-nav__button md-logo" aria-label="Cloudpie User Guide" data-md-component="logo">
+      
+  <img src="../images/cloudpie_black_logo.svg" alt="logo">
+
+    </a>
+    Cloudpie User Guide
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../understanding-cloudpie-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding Cloudpie Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Managing Users
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Managing Users
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adding-users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding new Users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage existing Users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating a Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects-view/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Viewing Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-edit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating a Project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deleting a project
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Cloud Accounts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Cloud Accounts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-account-add/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding a Cloud Account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-accounts-view/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Viewing Cloud Accounts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-accounts-querying/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Querying Cloud Accounts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-account-update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating a Cloud Account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-account-delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deleting a Cloud Account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Managing Cloud Alerts
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Managing Cloud Alerts
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Alerts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-alerts-in-cloud-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Alerts in Cloud Platforms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Alerts in Cloud Platforms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Alert Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gcp-alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      GCP Alert Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Alert Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-alert-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Alert Details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolving Alerts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Workspaces
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Workspaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workspace-add/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding a Workspace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workspaces-view/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying resources to Cloud in Workspaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workspace-update/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating a Workspace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workspace-delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deleting a Workspace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../insights/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Powered Insights
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tasks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Tasks Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage API tokens
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/openapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Docs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Alerts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-alerts-in-cloud-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring Alerts in Cloud Platforms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Alerts in Cloud Platforms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Alert Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gcp-alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      GCP Alert Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-alert-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Alert Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-alert-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Alert Details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-alerts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolving Alerts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="managing-alerts">Managing Alerts</h1>
+<p>Cloudpie enables users to view, configure, and resolve alerts for cloud accounts. Alerts can be auto-resolved when the cloud platform reports them as no longer an issue or manually resolved with a resolution note. This document explains how to navigate the alerts page, configure alerts for different cloud platforms, view alert details, and resolve alerts.</p>
+<hr />
+<h2 id="viewing-alerts">Viewing Alerts</h2>
+<ol>
+<li>Navigate to the <strong>Dashboard</strong> and select the project.</li>
+<li>Select the <strong>Cloud Account</strong> for which you want to view alerts.</li>
+<li>Click on the <strong>"Alerts"</strong> menu in the sidebar.</li>
+<li>
+<p>Use the following filters to refine the alerts list:</p>
+<ul>
+<li><strong>Time Range</strong>: Specify a date range to view alerts created within that period.</li>
+<li><strong>Status</strong>: Filter alerts by status (e.g., <strong>Open</strong>, <strong>Resolved</strong>).</li>
+</ul>
+</li>
+<li>
+<p>Click the <strong>Refresh</strong> button to load the latest alerts.</p>
+</li>
+</ol>
+<p><strong><em>Example Screenshot: Alerts Page</em></strong></p>
+<p><img alt="Screenshot of Alerts Page" src="../images/alerts_page_with_calendar.png" /></p>
+<hr />
+<h2 id="configuring-alerts-in-cloud-platforms">Configuring Alerts in Cloud Platforms</h2>
+<p>To configure alerts, use Cloudpie’s API endpoints. Below are the configurations for AWS, GCP, and Azure:</p>
+<h3 id="aws-alert-configuration">AWS Alert Configuration</h3>
+<ol>
+<li>Use the AWS Management Console, CLI, or SDK to create a CloudWatch alarm.</li>
+<li>
+<p>Set the <strong>alarm action</strong> to trigger an HTTP POST request to Cloudpie's alerts endpoint:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>POST https://&lt;cloudpie-url&gt;/api/v1/projects/{project_name}/cloud_accounts/aws/{account_id}/alerts
+</span></code></pre></div>
+</li>
+</ol>
+<p><strong>Example Payload:</strong></p>
+<div class="language-text highlight"><pre><span></span><code>{
+  &quot;AlarmName&quot;: &quot;High CPU Usage&quot;,
+  &quot;AWSAccountId&quot;: &quot;123456789012&quot;,
+  &quot;Region&quot;: &quot;us-west-2&quot;,
+  &quot;StateChangeTime&quot;: &quot;2025-01-10T10:30:00Z&quot;,
+  &quot;NewStateValue&quot;: &quot;ALARM&quot;,
+  &quot;NewStateReason&quot;: &quot;CPU utilization exceeded 80% threshold&quot;,
+  &quot;Trigger&quot;: {
+    &quot;MetricName&quot;: &quot;CPUUtilization&quot;,
+    &quot;Namespace&quot;: &quot;AWS/EC2&quot;,
+    &quot;StatisticType&quot;: &quot;Statistic&quot;,
+    &quot;Statistic&quot;: &quot;AVERAGE&quot;,
+    &quot;Unit&quot;: &quot;Percent&quot;
+  }
+}
+</code></pre></div>
+<h3 id="gcp-alert-configuration">GCP Alert Configuration</h3>
+<ol>
+<li>Create an alerting policy using the Google Cloud Console or Monitoring API.</li>
+<li>
+<p>Configure a <strong>webhook notification channel</strong> pointing to Cloudpie’s endpoint:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>POST https://&lt;cloudpie-url&gt;/api/v1/projects/{project_name}/cloud_accounts/gcp/{account_id}/alerts
+</span></code></pre></div>
+</li>
+</ol>
+<p><strong>Example Payload:</strong></p>
+<div class="language-text highlight"><pre><span></span><code>{
+  &quot;incident_id&quot;: &quot;12345-67890&quot;,
+  &quot;state&quot;: &quot;open&quot;,
+  &quot;resource_name&quot;: &quot;projects/my-project-id&quot;,
+  &quot;policy_name&quot;: &quot;High CPU Usage&quot;,
+  &quot;condition_name&quot;: &quot;CPU Utilization Exceeds 80%&quot;,
+  &quot;condition_threshold_value&quot;: 80,
+  &quot;condition_threshold_unit&quot;: &quot;percent&quot;,
+  &quot;start_time&quot;: &quot;2025-01-10T10:30:00Z&quot;
+}
+</code></pre></div>
+<h3 id="azure-alert-configuration">Azure Alert Configuration</h3>
+<ol>
+<li>Use the Azure Portal or CLI to create an alert rule.</li>
+<li>
+<p>Add an <strong>action group</strong> configured with a webhook pointing to Cloudpie’s endpoint:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>POST https://&lt;cloudpie-url&gt;/api/v1/projects/{project_name}/cloud_accounts/azure/{account_id}/alerts
+</span></code></pre></div>
+</li>
+</ol>
+<p><strong>Example Payload:</strong></p>
+<div class="language-text highlight"><pre><span></span><code>{
+  &quot;data&quot;: {
+    &quot;essentials&quot;: {
+      &quot;alertId&quot;: &quot;abc123&quot;,
+      &quot;severity&quot;: &quot;Sev3&quot;,
+      &quot;signalType&quot;: &quot;Metric&quot;,
+      &quot;monitorCondition&quot;: &quot;Fired&quot;,
+      &quot;alertRule&quot;: &quot;High Disk Usage&quot;
+    },
+    &quot;alertContext&quot;: {
+      &quot;condition&quot;: {
+        &quot;metricValue&quot;: 85,
+        &quot;threshold&quot;: 80
+      }
+    }
+  }
+}
+</code></pre></div>
+<hr />
+<h2 id="viewing-alert-details">Viewing Alert Details</h2>
+<ol>
+<li>From the alerts list, click the <strong>View Alert</strong> icon next to the alert you want to view.</li>
+<li>The alert details page provides:</li>
+<li><strong>Metadata</strong>: Includes ID, creation time, and status.</li>
+<li><strong>Raw Alert Payload</strong>: Displays the original alert data received from the cloud platform.</li>
+<li><strong>Alert History</strong>: Shows a timeline of changes to the alert’s state.</li>
+</ol>
+<p><strong><em>Example Screenshot 1: View Alert Details</em></strong></p>
+<p><img alt="Screenshot of View Alert Details" src="../images/view_alert.png" /></p>
+<p><strong><em>Example Screenshot 2: View Alert Details</em></strong></p>
+<p><img alt="Screenshot of View Alert Details" src="../images/alert_history.png" /></p>
+<hr />
+<h2 id="resolving-alerts">Resolving Alerts</h2>
+<ol>
+<li>From the alerts list, click the <strong>Resolve Alert</strong> button next to an open alert.</li>
+<li>Enter a <strong>Resolution Note</strong> describing the resolution action.</li>
+<li>Click <strong>Resolve Alert</strong> to mark the alert as resolved.</li>
+<li>The alert’s status is updated, and the resolution note is logged in the alert history.</li>
+</ol>
+<p><strong><em>Example Screenshot: Resolving an Alert</em></strong></p>
+<p><img alt="Screenshot of Resolve Alert" src="../images/resolve_alert.png" /></p>
+<hr />
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Alerts can be auto-resolved when the cloud platform reports that the condition causing the alert is no longer active.</li>
+<li>Use the refresh button on the alerts page to fetch the latest data.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        © 2025 Cloudpie. All rights reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand", "search.highlight", "search.share", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
