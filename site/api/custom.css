@@ -1,0 +1,12 @@
+.swagger-ui .microlight,
+.swagger-ui pre.microlight,
+.swagger-ui pre.example.microlight,
+.swagger-ui div[class*="highlight-code"] pre {
+    background: #F5F5F5 !important;
+    background-color: #F5F5F5 !important;
+}
+
+/* Keep syntax highlighting */
+.swagger-ui .microlight span {
+    background: transparent !important;
+}

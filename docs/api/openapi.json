@@ -1,0 +1,4663 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "Cloudpie API v1",
+        "description": "Welcome to the Cloudpie API documentation. Here, you'll find details about all the available API endpoints. To interact with the protected endpoints, you must provide an HTTP Bearer Token for authentication. \n\n**Getting Started with API Tokens:**\n- Log in to the Cloudpie portal.\n- Navigate to the left sidebar menu and select **API > API Tokens**.\n- Use the **Create New Token** form to generate a personal API token.\n- Include the generated token as a Bearer Token in the Authorization header of your HTTP requests.",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/v1/org/list_org_roles": {
+            "get": {
+                "summary": "List Org Roles",
+                "operationId": "list_org_roles_api_v1_org_list_org_roles_get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/org/users/add": {
+            "post": {
+                "summary": "Create Users",
+                "operationId": "create_users_api_v1_org_users_add_post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateUsersRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/org/projects/create": {
+            "post": {
+                "summary": "Create Project",
+                "operationId": "create_project_api_v1_org_projects_create_post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProjectData"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/org/projects/{project_name}/delete": {
+            "delete": {
+                "summary": "Delete Project",
+                "operationId": "delete_project_api_v1_org_projects__project_name__delete_delete",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/org/users/modify-users-org-roles": {
+            "post": {
+                "summary": "Modify Users Org Roles",
+                "operationId": "modify_users_org_roles_api_v1_org_users_modify_users_org_roles_post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ModifyOrgUsersRolesRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/org/users/delete": {
+            "post": {
+                "summary": "Delete Users",
+                "operationId": "delete_users_api_v1_org_users_delete_post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DeleteUsersRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/users/search/": {
+            "get": {
+                "summary": "Search Users",
+                "operationId": "search_users_api_v1_users_search__get",
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Query"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/users/get_all_users/": {
+            "get": {
+                "summary": "Get All Users",
+                "operationId": "get_all_users_api_v1_users_get_all_users__get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/search": {
+            "get": {
+                "summary": "Search Projects",
+                "operationId": "search_projects_api_v1_projects_search_get",
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Query"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/search": {
+            "get": {
+                "summary": "Search Cloud Accounts",
+                "operationId": "search_cloud_accounts_api_v1_projects__project_name__cloud_accounts_search_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Query"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/git_repos/search": {
+            "get": {
+                "summary": "Search Github Repos",
+                "operationId": "search_github_repos_api_v1_projects__project_name__git_repos_search_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Query"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/roles/list": {
+            "get": {
+                "summary": "Get Roles",
+                "operationId": "get_roles_api_v1_projects_roles_list_get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects": {
+            "get": {
+                "summary": "Get Projects",
+                "operationId": "get_projects_api_v1_projects_get",
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}": {
+            "get": {
+                "summary": "Get Project",
+                "operationId": "get_project_api_v1_projects__project_name__get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/members": {
+            "get": {
+                "summary": "Get Project Members",
+                "operationId": "get_project_members_api_v1_projects__project_name__members_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "description": "Search term for filtering members by email",
+                            "default": "",
+                            "title": "Search"
+                        },
+                        "description": "Search term for filtering members by email"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/edit": {
+            "put": {
+                "summary": "Edit Project",
+                "operationId": "edit_project_api_v1_projects__project_name__edit_put",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ProjectUpdateRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts": {
+            "get": {
+                "summary": "Get Cloud Accounts",
+                "operationId": "get_cloud_accounts_api_v1_projects__project_name__cloud_accounts_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/{cloud_platform}/{account_id}/runs": {
+            "get": {
+                "summary": "Get Steampipe Runs",
+                "operationId": "get_steampipe_runs_api_v1_projects__project_name__cloud_accounts__cloud_platform___account_id__runs_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Account Id"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 1,
+                            "title": "Page"
+                        }
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 10,
+                            "title": "Page Size"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/{cloud_platform}/{account_id}/run_query": {
+            "post": {
+                "summary": "Execute Steampipe Query",
+                "operationId": "execute_steampipe_query_api_v1_projects__project_name__cloud_accounts__cloud_platform___account_id__run_query_post",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Account Id"
+                        }
+                    },
+                    {
+                        "name": "request_id",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "title": "Request Id"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SteampipeTriggerPayload"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/{cloud_platform}/{account_id}/edit": {
+            "put": {
+                "summary": "Edit Cloud Account",
+                "operationId": "edit_cloud_account_api_v1_projects__project_name__cloud_accounts__cloud_platform___account_id__edit_put",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Account Id"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CloudAccountUpdate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/add_cloud_account": {
+            "post": {
+                "summary": "Add Cloud Account To Project",
+                "operationId": "add_cloud_account_to_project_api_v1_projects__project_name__add_cloud_account_post",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CloudAccount"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/{cloud_platform}/{account_id}/delete": {
+            "delete": {
+                "summary": "Remove Cloud Account From Project",
+                "operationId": "remove_cloud_account_from_project_api_v1_projects__project_name__cloud_accounts__cloud_platform___account_id__delete_delete",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Account Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/{cloud_platform}/{account_id}": {
+            "get": {
+                "summary": "Get Cloud Account Details",
+                "operationId": "get_cloud_account_details_api_v1_projects__project_name__cloud_accounts__cloud_platform___account_id__get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Account Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/{cloud_platform}/{account_id}/scheduled_runs/list": {
+            "get": {
+                "summary": "List Scheduled Runs",
+                "description": "List all schedules for a specific cloud account.",
+                "operationId": "list_scheduled_runs_api_v1_projects__project_name__cloud_accounts__cloud_platform___account_id__scheduled_runs_list_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Account Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/{cloud_platform}/{account_id}/scheduled_runs/{schedule_id}": {
+            "get": {
+                "summary": "Get Scheduled Run",
+                "description": "Get details of a specific schedule.",
+                "operationId": "get_scheduled_run_api_v1_projects__project_name__cloud_accounts__cloud_platform___account_id__scheduled_runs__schedule_id__get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Account Id"
+                        }
+                    },
+                    {
+                        "name": "schedule_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Schedule Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete Scheduled Run",
+                "description": "Delete a specific schedule.",
+                "operationId": "delete_scheduled_run_api_v1_projects__project_name__cloud_accounts__cloud_platform___account_id__scheduled_runs__schedule_id__delete",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Account Id"
+                        }
+                    },
+                    {
+                        "name": "schedule_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Schedule Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/{cloud_platform}/{account_id}/scheduled_runs/{schedule_id}/requests": {
+            "get": {
+                "summary": "List Schedule Requests",
+                "description": "List all requests triggered by a specific schedule.",
+                "operationId": "list_schedule_requests_api_v1_projects__project_name__cloud_accounts__cloud_platform___account_id__scheduled_runs__schedule_id__requests_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Account Id"
+                        }
+                    },
+                    {
+                        "name": "schedule_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Schedule Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/{cloud_platform}/{account_id}/scheduled_runs/{schedule_id}/state": {
+            "put": {
+                "summary": "Update Schedule State",
+                "description": "Update the state of a schedule (enable/disable).",
+                "operationId": "update_schedule_state_api_v1_projects__project_name__cloud_accounts__cloud_platform___account_id__scheduled_runs__schedule_id__state_put",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Account Id"
+                        }
+                    },
+                    {
+                        "name": "schedule_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Schedule Id"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ScheduleStateUpdate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/git_repos/add": {
+            "post": {
+                "summary": "Add Github Repo To Project",
+                "operationId": "add_github_repo_to_project_api_v1_projects__project_name__git_repos_add_post",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/GitHubRepoDetails"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/git_repos": {
+            "get": {
+                "summary": "Get All Github Repos In Project",
+                "operationId": "get_all_github_repos_in_project_api_v1_projects__project_name__git_repos_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/git_repos/{repo_name}": {
+            "get": {
+                "summary": "Get Github Repo Details",
+                "operationId": "get_github_repo_details_api_v1_projects__project_name__git_repos__repo_name__get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "repo_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Repo Name"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/git_repos/{repo_name}/edit": {
+            "put": {
+                "summary": "Edit Github Repo",
+                "operationId": "edit_github_repo_api_v1_projects__project_name__git_repos__repo_name__edit_put",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "repo_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Repo Name"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/GitHubRepoUpdate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/git_repos/{repo_name}/delete": {
+            "delete": {
+                "summary": "Delete Github Repo From Project",
+                "operationId": "delete_github_repo_from_project_api_v1_projects__project_name__git_repos__repo_name__delete_delete",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "repo_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Repo Name"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/workspaces": {
+            "get": {
+                "summary": "Get Project Workspaces",
+                "operationId": "get_project_workspaces_api_v1_projects__project_name__workspaces_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/workspaces/create": {
+            "post": {
+                "summary": "Api Create Workspace",
+                "operationId": "api_create_workspace_api_v1_projects__project_name__workspaces_create_post",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateWorkspaceModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/workspaces/{workspace_name}": {
+            "get": {
+                "summary": "Get Workspace Details",
+                "operationId": "get_workspace_details_api_v1_projects__project_name__workspaces__workspace_name__get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "workspace_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Workspace Name"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/workspaces/{workspace_name}/edit": {
+            "put": {
+                "summary": "Api Update Workspace",
+                "operationId": "api_update_workspace_api_v1_projects__project_name__workspaces__workspace_name__edit_put",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "workspace_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Workspace Name"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateWorkspaceModel"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/workspaces/{workspace_name}/delete": {
+            "delete": {
+                "summary": "Delete Workspace From Project",
+                "operationId": "delete_workspace_from_project_api_v1_projects__project_name__workspaces__workspace_name__delete_delete",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "workspace_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Workspace Name"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/workspaces/{workspace_name}/execute": {
+            "post": {
+                "summary": "Execute Terraform",
+                "operationId": "execute_terraform_api_v1_projects__project_name__workspaces__workspace_name__execute_post",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "workspace_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Workspace Name"
+                        }
+                    },
+                    {
+                        "name": "request_id",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "title": "Request Id"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TerraformExecutePayload"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/workspaces/{workspace_name}/runs": {
+            "get": {
+                "summary": "Get Terraform Runs",
+                "operationId": "get_terraform_runs_api_v1_projects__project_name__workspaces__workspace_name__runs_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "workspace_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Workspace Name"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 1,
+                            "title": "Page"
+                        }
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 10,
+                            "title": "Page Size"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/requests/{request_id}": {
+            "get": {
+                "summary": "Get Request Details",
+                "operationId": "get_request_details_api_v1_projects__project_name__requests__request_id__get",
+                "parameters": [
+                    {
+                        "name": "request_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Request Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/requests/{request_id}/artifacts": {
+            "get": {
+                "summary": "Download Artifacts",
+                "operationId": "download_artifacts_api_v1_projects__project_name__requests__request_id__artifacts_get",
+                "parameters": [
+                    {
+                        "name": "request_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Request Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/sprints": {
+            "get": {
+                "summary": "Get All Sprints",
+                "operationId": "get_all_sprints_api_v1_projects__project_name__sprints_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/sprints/create": {
+            "post": {
+                "summary": "Create Sprint",
+                "operationId": "create_sprint_api_v1_projects__project_name__sprints_create_post",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SprintCreateRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/sprints/nearest": {
+            "get": {
+                "summary": "Get Nearest Sprint",
+                "operationId": "get_nearest_sprint_api_v1_projects__project_name__sprints_nearest_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/sprints/{sprint_id}": {
+            "get": {
+                "summary": "Get Sprint",
+                "operationId": "get_sprint_api_v1_projects__project_name__sprints__sprint_id__get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "sprint_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Sprint Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Edit Sprint",
+                "operationId": "edit_sprint_api_v1_projects__project_name__sprints__sprint_id__put",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "sprint_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Sprint Id"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SprintUpdateRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/tasks/create": {
+            "post": {
+                "summary": "Create Task",
+                "operationId": "create_task_api_v1_projects__project_name__tasks_create_post",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TaskCreate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/tasks/edit/{task_id}": {
+            "put": {
+                "summary": "Edit Task",
+                "operationId": "edit_task_api_v1_projects__project_name__tasks_edit__task_id__put",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "task_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Task Id"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TaskUpdate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/tasks/{task_id}": {
+            "get": {
+                "summary": "Get Task",
+                "operationId": "get_task_api_v1_projects__project_name__tasks__task_id__get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "task_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Task Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete Task",
+                "operationId": "delete_task_api_v1_projects__project_name__tasks__task_id__delete",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "task_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Task Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/tasks": {
+            "get": {
+                "summary": "Get All Tasks",
+                "operationId": "get_all_tasks_api_v1_projects__project_name__tasks_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "sprint_id",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "title": "Sprint Id"
+                        }
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "title": "Status"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/tasks/{task_id}/comments": {
+            "post": {
+                "summary": "Add Comments",
+                "operationId": "add_comments_api_v1_projects__project_name__tasks__task_id__comments_post",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "task_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Task Id"
+                        }
+                    },
+                    {
+                        "name": "session_token",
+                        "in": "cookie",
+                        "required": false,
+                        "schema": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "title": "Session Token"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CommentsCreate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "get": {
+                "summary": "Get Task Comments",
+                "operationId": "get_task_comments_api_v1_projects__project_name__tasks__task_id__comments_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "task_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Task Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/tags": {
+            "get": {
+                "summary": "Get Project Tags",
+                "operationId": "get_project_tags_api_v1_projects__project_name__tags_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/tags/update": {
+            "put": {
+                "summary": "Update Tags",
+                "operationId": "update_tags_api_v1_projects__project_name__tags_update_put",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TagsUpdate"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/{cloud_platform}/{account_id}/alerts": {
+            "post": {
+                "summary": "Create Alert",
+                "description": "Create or update an alert.",
+                "operationId": "create_alert_api_v1_projects__project_name__cloud_accounts__cloud_platform___account_id__alerts_post",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Account Id"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "title": "Alert Data"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "get": {
+                "summary": "List Alerts",
+                "description": "List alerts for a specific cloud account with optional filtering and pagination.",
+                "operationId": "list_alerts_api_v1_projects__project_name__cloud_accounts__cloud_platform___account_id__alerts_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Account Id"
+                        }
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "title": "Status"
+                        }
+                    },
+                    {
+                        "name": "start_time",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "title": "Start Time"
+                        }
+                    },
+                    {
+                        "name": "end_time",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "title": "End Time"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 1,
+                            "title": "Page"
+                        }
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 50,
+                            "title": "Page Size"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/{cloud_platform}/{account_id}/alerts/{alert_id}": {
+            "get": {
+                "summary": "Get Alert",
+                "description": "Get details of a specific alert.",
+                "operationId": "get_alert_api_v1_projects__project_name__cloud_accounts__cloud_platform___account_id__alerts__alert_id__get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Account Id"
+                        }
+                    },
+                    {
+                        "name": "alert_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Alert Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/{cloud_platform}/{account_id}/alerts/{alert_id}/resolve": {
+            "put": {
+                "summary": "Resolve Alert",
+                "description": "Mark an alert as resolved with a resolution note.",
+                "operationId": "resolve_alert_api_v1_projects__project_name__cloud_accounts__cloud_platform___account_id__alerts__alert_id__resolve_put",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Account Id"
+                        }
+                    },
+                    {
+                        "name": "alert_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Alert Id"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResolveAlert"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/{cloud_platform}/{account_id}/insights/{insight_id}/trigger": {
+            "post": {
+                "summary": "Trigger Insight",
+                "operationId": "trigger_insight_api_v1_projects__project_name__cloud_accounts__cloud_platform___account_id__insights__insight_id__trigger_post",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Account Id"
+                        }
+                    },
+                    {
+                        "name": "insight_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Insight Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/{cloud_platform}/{cloud_account_id}/insights": {
+            "get": {
+                "summary": "List Insights",
+                "operationId": "list_insights_api_v1_projects__project_name__cloud_accounts__cloud_platform___cloud_account_id__insights_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "cloud_account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Account Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object"
+                                    },
+                                    "title": "Response List Insights Api V1 Projects  Project Name  Cloud Accounts  Cloud Platform   Cloud Account Id  Insights Get"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/{cloud_platform}/{cloud_account_id}/insights/{template_id}/": {
+            "get": {
+                "summary": "Get Insight",
+                "operationId": "get_insight_api_v1_projects__project_name__cloud_accounts__cloud_platform___cloud_account_id__insights__template_id___get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "cloud_account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Account Id"
+                        }
+                    },
+                    {
+                        "name": "template_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Template Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "title": "Response Get Insight Api V1 Projects  Project Name  Cloud Accounts  Cloud Platform   Cloud Account Id  Insights  Template Id   Get"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/cloud_accounts/{cloud_platform}/{account_id}/insights/{template_id}/content": {
+            "get": {
+                "summary": "Get Insight Content",
+                "operationId": "get_insight_content_api_v1_projects__project_name__cloud_accounts__cloud_platform___account_id__insights__template_id__content_get",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    },
+                    {
+                        "name": "cloud_platform",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Cloud Platform"
+                        }
+                    },
+                    {
+                        "name": "account_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Account Id"
+                        }
+                    },
+                    {
+                        "name": "template_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Template Id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/stats/user": {
+            "post": {
+                "summary": "Get Global Stats",
+                "description": "Return some useful stats to display on Dashboard home.",
+                "operationId": "get_global_stats_api_v1_stats_user_post",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userStats"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/projects/{project_name}/stats": {
+            "post": {
+                "summary": "Get Global Stats",
+                "description": "Return some useful stats to display on Dashboard home.",
+                "operationId": "get_global_stats_api_v1_projects__project_name__stats_post",
+                "parameters": [
+                    {
+                        "name": "project_name",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "title": "Project Name"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/userStatsforProject"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful Response",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "CloudAccount": {
+                "properties": {
+                    "cloud_platform": {
+                        "type": "string",
+                        "title": "Cloud Platform"
+                    },
+                    "account_id": {
+                        "type": "string",
+                        "title": "Account Id"
+                    },
+                    "auth_secrets": {
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "type": "object",
+                        "title": "Auth Secrets"
+                    },
+                    "variables": {
+                        "anyOf": [
+                            {
+                                "additionalProperties": {
+                                    "type": "string"
+                                },
+                                "type": "object"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Variables"
+                    },
+                    "secrets": {
+                        "anyOf": [
+                            {
+                                "additionalProperties": {
+                                    "type": "string"
+                                },
+                                "type": "object"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Secrets"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "cloud_platform",
+                    "account_id",
+                    "auth_secrets"
+                ],
+                "title": "CloudAccount"
+            },
+            "CloudAccountUpdate": {
+                "properties": {
+                    "auth_secrets": {
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "type": "object",
+                        "title": "Auth Secrets"
+                    },
+                    "variables": {
+                        "anyOf": [
+                            {
+                                "additionalProperties": {
+                                    "type": "string"
+                                },
+                                "type": "object"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Variables"
+                    },
+                    "secrets": {
+                        "anyOf": [
+                            {
+                                "additionalProperties": {
+                                    "type": "string"
+                                },
+                                "type": "object"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Secrets"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "auth_secrets"
+                ],
+                "title": "CloudAccountUpdate"
+            },
+            "CommentCreate": {
+                "properties": {
+                    "content": {
+                        "type": "string",
+                        "title": "Content"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "content"
+                ],
+                "title": "CommentCreate"
+            },
+            "CommentsCreate": {
+                "properties": {
+                    "comments": {
+                        "items": {
+                            "$ref": "#/components/schemas/CommentCreate"
+                        },
+                        "type": "array",
+                        "title": "Comments"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "comments"
+                ],
+                "title": "CommentsCreate"
+            },
+            "CreateUsersRequest": {
+                "properties": {
+                    "users": {
+                        "items": {
+                            "$ref": "#/components/schemas/UserCreateData"
+                        },
+                        "type": "array",
+                        "title": "Users"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "users"
+                ],
+                "title": "CreateUsersRequest",
+                "description": "Model for the create_users request, containing a list of users."
+            },
+            "CreateWorkspaceModel": {
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "title": "Name"
+                    },
+                    "description": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Description"
+                    },
+                    "variables": {
+                        "anyOf": [
+                            {
+                                "additionalProperties": {
+                                    "type": "string"
+                                },
+                                "type": "object"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Variables"
+                    },
+                    "secrets": {
+                        "anyOf": [
+                            {
+                                "additionalProperties": {
+                                    "type": "string"
+                                },
+                                "type": "object"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Secrets"
+                    },
+                    "terraform_version": {
+                        "type": "string",
+                        "title": "Terraform Version"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name",
+                    "terraform_version"
+                ],
+                "title": "CreateWorkspaceModel"
+            },
+            "DeleteUsersRequest": {
+                "properties": {
+                    "usernames": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array",
+                        "title": "Usernames"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "usernames"
+                ],
+                "title": "DeleteUsersRequest",
+                "description": "Model for deleting multiple users."
+            },
+            "GenerateTokenRequest": {
+                "properties": {
+                    "token_name": {
+                        "type": "string",
+                        "pattern": "^[a-zA-Z0-9]+$",
+                        "title": "Token Name",
+                        "description": "Alphanumeric token name without spaces"
+                    },
+                    "expiry_hours": {
+                        "anyOf": [
+                            {
+                                "type": "integer",
+                                "maximum": 2160,
+                                "minimum": 1
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Expiry Hours",
+                        "description": "Expiry in hours (1-2160, max 90 days)"
+                    },
+                    "expiry_days": {
+                        "anyOf": [
+                            {
+                                "type": "integer",
+                                "maximum": 90,
+                                "minimum": 1
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Expiry Days",
+                        "description": "Expiry in days (1-90)"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "token_name"
+                ],
+                "title": "GenerateTokenRequest"
+            },
+            "GitHubRepoDetails": {
+                "properties": {
+                    "repo_name": {
+                        "type": "string",
+                        "title": "Repo Name"
+                    },
+                    "repo_url": {
+                        "type": "string",
+                        "title": "Repo Url"
+                    },
+                    "branch": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Branch"
+                    },
+                    "terraform_config_path": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Terraform Config Path"
+                    },
+                    "steampipe_queries_path": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Steampipe Queries Path"
+                    },
+                    "custom_benchmark_path": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Custom Benchmark Path"
+                    },
+                    "token": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Token"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "repo_name",
+                    "repo_url",
+                    "branch",
+                    "terraform_config_path",
+                    "steampipe_queries_path",
+                    "custom_benchmark_path"
+                ],
+                "title": "GitHubRepoDetails"
+            },
+            "GitHubRepoUpdate": {
+                "properties": {
+                    "branch": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Branch"
+                    },
+                    "terraform_config_path": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Terraform Config Path"
+                    },
+                    "steampipe_queries_path": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Steampipe Queries Path"
+                    },
+                    "custom_benchmark_path": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Custom Benchmark Path"
+                    },
+                    "token": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Token"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "branch",
+                    "terraform_config_path",
+                    "steampipe_queries_path",
+                    "custom_benchmark_path"
+                ],
+                "title": "GitHubRepoUpdate"
+            },
+            "HTTPValidationError": {
+                "properties": {
+                    "detail": {
+                        "items": {
+                            "$ref": "#/components/schemas/ValidationError"
+                        },
+                        "type": "array",
+                        "title": "Detail"
+                    }
+                },
+                "type": "object",
+                "title": "HTTPValidationError"
+            },
+            "LoginData": {
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "title": "Username"
+                    },
+                    "password": {
+                        "type": "string",
+                        "title": "Password"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "username",
+                    "password"
+                ],
+                "title": "LoginData"
+            },
+            "MemberData": {
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "title": "Username"
+                    },
+                    "roles": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array",
+                        "title": "Roles"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "username",
+                    "roles"
+                ],
+                "title": "MemberData"
+            },
+            "ModifyOrgUsersRolesRequest": {
+                "properties": {
+                    "users": {
+                        "items": {
+                            "$ref": "#/components/schemas/UserRoleUpdateRequest"
+                        },
+                        "type": "array",
+                        "title": "Users"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "users"
+                ],
+                "title": "ModifyOrgUsersRolesRequest",
+                "description": "Model for modifying organization roles for multiple users."
+            },
+            "PasswordResetRequest": {
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "title": "Username"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "username"
+                ],
+                "title": "PasswordResetRequest",
+                "description": "Model for requesting a password reset link."
+            },
+            "PasswordResetSubmit": {
+                "properties": {
+                    "token": {
+                        "type": "string",
+                        "title": "Token"
+                    },
+                    "new_password": {
+                        "type": "string",
+                        "minLength": 8,
+                        "title": "New Password",
+                        "description": "The new password, at least 8 characters long."
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "token",
+                    "new_password"
+                ],
+                "title": "PasswordResetSubmit",
+                "description": "Model for submitting the new password via the reset link."
+            },
+            "ProjectData": {
+                "properties": {
+                    "project_name": {
+                        "type": "string",
+                        "title": "Project Name"
+                    },
+                    "description": {
+                        "type": "string",
+                        "title": "Description"
+                    },
+                    "members": {
+                        "anyOf": [
+                            {
+                                "items": {
+                                    "$ref": "#/components/schemas/MemberData"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Members",
+                        "example": [
+                            {
+                                "roles": [
+                                    "admin",
+                                    "user"
+                                ],
+                                "username": "user123"
+                            }
+                        ]
+                    },
+                    "variables": {
+                        "anyOf": [
+                            {
+                                "additionalProperties": {
+                                    "type": "string"
+                                },
+                                "type": "object"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Variables"
+                    },
+                    "secrets": {
+                        "anyOf": [
+                            {
+                                "additionalProperties": {
+                                    "type": "string"
+                                },
+                                "type": "object"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Secrets"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "project_name",
+                    "description"
+                ],
+                "title": "ProjectData"
+            },
+            "ProjectUpdateRequest": {
+                "properties": {
+                    "description": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Description"
+                    },
+                    "members": {
+                        "anyOf": [
+                            {
+                                "items": {
+                                    "$ref": "#/components/schemas/MemberData"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Members"
+                    },
+                    "variables": {
+                        "anyOf": [
+                            {
+                                "additionalProperties": {
+                                    "type": "string"
+                                },
+                                "type": "object"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Variables"
+                    },
+                    "secrets": {
+                        "anyOf": [
+                            {
+                                "additionalProperties": {
+                                    "type": "string"
+                                },
+                                "type": "object"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Secrets"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "description"
+                ],
+                "title": "ProjectUpdateRequest"
+            },
+            "ResolveAlert": {
+                "properties": {
+                    "resolved_by": {
+                        "type": "string",
+                        "title": "Resolved By",
+                        "description": "Username of the person resolving the alert"
+                    },
+                    "resolution_note": {
+                        "type": "string",
+                        "title": "Resolution Note",
+                        "description": "Note explaining why the alert was resolved"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "resolved_by",
+                    "resolution_note"
+                ],
+                "title": "ResolveAlert"
+            },
+            "RevokeTokenRequest": {
+                "properties": {
+                    "token_name": {
+                        "type": "string",
+                        "title": "Token Name"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "token_name"
+                ],
+                "title": "RevokeTokenRequest"
+            },
+            "ScheduleStateUpdate": {
+                "properties": {
+                    "state": {
+                        "type": "string",
+                        "pattern": "^(enabled|disabled)$",
+                        "title": "State",
+                        "description": "The new state of the schedule"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "state"
+                ],
+                "title": "ScheduleStateUpdate",
+                "description": "Model for updating schedule state."
+            },
+            "SprintCreateRequest": {
+                "properties": {
+                    "start_date": {
+                        "type": "string",
+                        "title": "Start Date"
+                    },
+                    "end_date": {
+                        "type": "string",
+                        "title": "End Date"
+                    },
+                    "goal": {
+                        "type": "string",
+                        "title": "Goal"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "start_date",
+                    "end_date",
+                    "goal"
+                ],
+                "title": "SprintCreateRequest"
+            },
+            "SprintUpdateRequest": {
+                "properties": {
+                    "start_date": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Start Date"
+                    },
+                    "end_date": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "End Date"
+                    },
+                    "goal": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Goal"
+                    }
+                },
+                "type": "object",
+                "title": "SprintUpdateRequest"
+            },
+            "StatusUpdateModel": {
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "title": "Status"
+                    },
+                    "error": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Error"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "status"
+                ],
+                "title": "StatusUpdateModel"
+            },
+            "SteampipeTriggerPayload": {
+                "properties": {
+                    "cloud_account": {
+                        "type": "string",
+                        "title": "Cloud Account"
+                    },
+                    "cloud_platform": {
+                        "type": "string",
+                        "title": "Cloud Platform"
+                    },
+                    "run_type": {
+                        "type": "string",
+                        "title": "Run Type",
+                        "description": "Type of run. Must be either 'query' or 'benchmark'"
+                    },
+                    "git_repo": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Git Repo",
+                        "description": "Git repository containing the queries or benchmark configurations."
+                    },
+                    "use_auto_benchmark": {
+                        "anyOf": [
+                            {
+                                "type": "boolean"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Use Auto Benchmark",
+                        "description": "Flag to use the latest benchmark for the cloud platform. Only applicable when run_type is 'benchmark'.",
+                        "default": false
+                    },
+                    "steampipe_version": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Steampipe Version",
+                        "description": "Version of Steampipe to use. Defaults to latest.",
+                        "default": "latest"
+                    },
+                    "powerpipe_version": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Powerpipe Version",
+                        "description": "Version of Powerpipe to use. Defaults to latest. Only applicable when run_type is 'benchmark'.",
+                        "default": "latest"
+                    },
+                    "plugin_version": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Plugin Version",
+                        "description": "Version of the cloud platform plugin to use. Defaults to latest.",
+                        "default": "latest"
+                    },
+                    "schedule": {
+                        "anyOf": [
+                            {
+                                "type": "object"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Schedule",
+                        "description": "Schedule configuration. Example: {'frequency': 'rate(1 hour)'} or {'frequency': 'cron(0 12 * * ? *)'}."
+                    },
+                    "task_timeout_hours": {
+                        "anyOf": [
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Task Timeout Hours",
+                        "default": 2
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "cloud_account",
+                    "cloud_platform",
+                    "run_type"
+                ],
+                "title": "SteampipeTriggerPayload"
+            },
+            "TagsUpdate": {
+                "properties": {
+                    "tags": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array",
+                        "maxItems": 100,
+                        "minItems": 0,
+                        "title": "Tags",
+                        "description": "Complete list of tags for the project"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "tags"
+                ],
+                "title": "TagsUpdate",
+                "example": {
+                    "tags": [
+                        "frontend",
+                        "backend",
+                        "database",
+                        "ui",
+                        "performance"
+                    ]
+                }
+            },
+            "TaskCreate": {
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "title": "Title"
+                    },
+                    "description": {
+                        "type": "string",
+                        "title": "Description"
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Type"
+                    },
+                    "status": {
+                        "type": "string",
+                        "title": "Status"
+                    },
+                    "priority": {
+                        "type": "string",
+                        "title": "Priority"
+                    },
+                    "assignedTo": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Assignedto"
+                    },
+                    "dueDate": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "Duedate"
+                    },
+                    "tags": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array",
+                        "title": "Tags"
+                    },
+                    "relationships": {
+                        "items": {
+                            "type": "object"
+                        },
+                        "type": "array",
+                        "title": "Relationships"
+                    },
+                    "sprintId": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Sprintid"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "title",
+                    "description",
+                    "type",
+                    "status",
+                    "priority",
+                    "assignedTo",
+                    "dueDate",
+                    "tags",
+                    "relationships",
+                    "sprintId"
+                ],
+                "title": "TaskCreate"
+            },
+            "TaskUpdate": {
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "title": "Title"
+                    },
+                    "description": {
+                        "type": "string",
+                        "title": "Description"
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Type"
+                    },
+                    "status": {
+                        "type": "string",
+                        "title": "Status"
+                    },
+                    "priority": {
+                        "type": "string",
+                        "title": "Priority"
+                    },
+                    "assignedTo": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Assignedto"
+                    },
+                    "dueDate": {
+                        "type": "string",
+                        "format": "date",
+                        "title": "Duedate"
+                    },
+                    "tags": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array",
+                        "title": "Tags"
+                    },
+                    "relationships": {
+                        "items": {
+                            "type": "object"
+                        },
+                        "type": "array",
+                        "title": "Relationships"
+                    },
+                    "sprintId": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Sprintid"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "title",
+                    "description",
+                    "type",
+                    "status",
+                    "priority",
+                    "assignedTo",
+                    "dueDate",
+                    "tags",
+                    "relationships",
+                    "sprintId"
+                ],
+                "title": "TaskUpdate"
+            },
+            "TerraformExecutePayload": {
+                "properties": {
+                    "cloud_account": {
+                        "type": "string",
+                        "title": "Cloud Account"
+                    },
+                    "cloud_platform": {
+                        "type": "string",
+                        "title": "Cloud Platform"
+                    },
+                    "git_repo": {
+                        "type": "string",
+                        "title": "Git Repo"
+                    },
+                    "phases": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array",
+                        "title": "Phases"
+                    },
+                    "task_timeout_hours": {
+                        "anyOf": [
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Task Timeout Hours",
+                        "default": 2
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "cloud_account",
+                    "cloud_platform",
+                    "git_repo",
+                    "phases"
+                ],
+                "title": "TerraformExecutePayload"
+            },
+            "UpdateErrorDetailsRequest": {
+                "properties": {
+                    "error_message": {
+                        "type": "string",
+                        "title": "Error Message"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "error_message"
+                ],
+                "title": "UpdateErrorDetailsRequest"
+            },
+            "UpdateStateRequest": {
+                "properties": {
+                    "state": {
+                        "type": "string",
+                        "title": "State"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "state"
+                ],
+                "title": "UpdateStateRequest"
+            },
+            "UpdateWorkspaceModel": {
+                "properties": {
+                    "description": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Description"
+                    },
+                    "variables": {
+                        "anyOf": [
+                            {
+                                "additionalProperties": {
+                                    "type": "string"
+                                },
+                                "type": "object"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Variables"
+                    },
+                    "secrets": {
+                        "anyOf": [
+                            {
+                                "additionalProperties": {
+                                    "type": "string"
+                                },
+                                "type": "object"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Secrets"
+                    },
+                    "terraform_version": {
+                        "type": "string",
+                        "title": "Terraform Version"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "terraform_version"
+                ],
+                "title": "UpdateWorkspaceModel"
+            },
+            "UserCreateData": {
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "title": "Username"
+                    },
+                    "password": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Password"
+                    },
+                    "org_roles": {
+                        "anyOf": [
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Org Roles"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "username"
+                ],
+                "title": "UserCreateData",
+                "description": "Model for a single user's data for the create_users method."
+            },
+            "UserRoleUpdateRequest": {
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "title": "Username"
+                    },
+                    "org_roles": {
+                        "anyOf": [
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "title": "Org Roles"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "username"
+                ],
+                "title": "UserRoleUpdateRequest",
+                "description": "Model for a single user's role update request."
+            },
+            "ValidationError": {
+                "properties": {
+                    "loc": {
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "integer"
+                                }
+                            ]
+                        },
+                        "type": "array",
+                        "title": "Location"
+                    },
+                    "msg": {
+                        "type": "string",
+                        "title": "Message"
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Error Type"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "loc",
+                    "msg",
+                    "type"
+                ],
+                "title": "ValidationError"
+            },
+            "userStats": {
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "title": "Username"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "username"
+                ],
+                "title": "userStats"
+            },
+            "userStatsforProject": {
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "title": "Username"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "username"
+                ],
+                "title": "userStatsforProject"
+            }
+        }
+    }
+}
