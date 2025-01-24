@@ -1,0 +1,45 @@
+# Analysis Report
+
+## Summary Statistics
+
+No detailed data was provided for analysis. Consequently, I am unable to produce specific summary statistics for the provided Azure managed disks.
+
+However, in general, the summary statistics would be calculated and presented as follows:
+
+1. **Total Disks Found:** Total number of all Azure managed disks.
+2. **Total Size:** Sum of the size of all disks, reported in GB.
+3. **Estimated Monthly Waste:** Aggregate potential cost savings if all unused disks were deleted. Calculated based on the individual disk cost per month multiplied by the total unused disk size.
+
+The breakdown of disk type as per the SKU type would typically include the number of disks and total size for each category: Premium_LRS, StandardSSD_LRS, Standard_LRS, and UltraSSD_LRS.
+
+## Cost Analysis Table
+
+A cost analysis table showing detailed information for each disk would normally be created. It would include columns for Disk Name, Size, SKU, Age, Region, Usage, Monthly Cost, and Action.
+
+Here's an example of how the table would look:
+
+| Disk Name | Size (GB) | SKU | Age (days) | Region | Usage | Monthly Cost (USD) | Action |
+|---|---|---|---|---|---|---|---|
+| disk1 | 256 | Premium | 45 | eastus | None | $32.00 | Delete |
+
+## Cost Optimization
+
+Cost optimization actions would typically comprise immediate actions like disk deletions and SKU downgrades, as well as sizing and usage improvements spread across the different SKU types and age groups.
+
+## Recommendations
+
+Recommendations to optimize the Azure cloud resources would encompass the following areas:
+
+1. **Immediate Actions:** Deleting unused disks, downgrading the SKU for disks where high performance is not required, and adjusting the size of the disks to match supplied demography.
+2. **Process Improvements:** Improving lifecycle management by frequently checking for unused disks and deleting them as soon as they are found to be unused, automating the process of identifying and deleting the unused disks, and enhancing the monitoring strategies for better resource management.
+3. **Best Practices:** Regularly conducting disk audits to keep track of the disks used, enforcing tag compliance to ensure easier identification of resources, and establishing robust data cleanup procedures.
+
+## Remarks
+
+Given no data points were provisioned for analysis, the above responses represent the format and general content of response given actual data. 
+
+Actual numbers and specifics would depend upon the true state of the Azure managed disks, including their size, usage, SKU type, and age. 
+
+Other contributing factors could include various pricing structures of Azure managed disks across different regions as well as internal company policies regarding data retention, database administration, and cloud resources lifecycle management. 
+
+Finally, before any deletion or SKU downgrade operations, it is imperative to verify the disk usage status manually and check for the existence of snapshots or other data backups.
