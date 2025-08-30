@@ -3,7 +3,7 @@
 View and manage cloud credentials associated with your CloudPie project.
 
 ## Prerequisites
-- User with roles that has permissions to Edit Cloud Credentials
+- User with roles to Edit Cloud Credentials
 - The credential is not in use by active deployments
 
 ## Accessing Your Credentials

@@ -39,6 +39,9 @@ nav:
       - Updating a Project: project-edit.md
       - Deleting a project: project-delete.md
   - Cloud Accounts:
+      - Adding Cloud Credentials: cloud-credentials-add.md
+      - Updating Cloud Credentials: cloud-credentials-view-edit.md
+      - Removing Cloud Credentials: cloud-credentials-delete.md
       - Adding cloud Credentials: cloud-credentials-add.md
       - Adding a Cloud Account: cloud-account-add.md
       - Viewing Cloud Accounts: cloud-accounts-view.md
@@ -46,6 +49,7 @@ nav:
       - Updating a Cloud Account: cloud-account-update.md
       - Deleting a Cloud Account: cloud-account-delete.md
       - Managing Cloud Alerts: cloud-alerts.md
+      - Configuring Cloud Organizational Policies: cloud-org-policy.md
   - Workspaces:
       - Adding a Workspace: workspace-add.md
       - Deploying resources to Cloud in Workspaces: workspaces-view.md

@@ -3,7 +3,7 @@
 Learn how to safely remove cloud credentials from your CloudPie project.
 
 ## Prerequisites
-- User with roles that has permissions to Delete Cloud Credentials
+- User with roles to Delete Cloud Credentials
 - The credential is not in use by active deployments
 
 ## Deleting a Credential

@@ -5,7 +5,7 @@ Cloud credentials allow you to securely connect your project with multiple cloud
 ## Prerequisites
 - An active project in CloudPie
 - Valid credentials for your cloud provider(s)
-- User with roles that has permissions to create Cloud Credentials
+- User with roles with permissions to create Cloud Credentials
 
 ## Supported Cloud Providers and Authentication Methods
 

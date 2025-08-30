@@ -1,4 +1,4 @@
-### Viewing Workspaces
+### Using Workspace to deploy workloads using Terraform
 
 To view and manage workspaces associated with a project:
 

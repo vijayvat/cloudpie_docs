@@ -10,7 +10,7 @@ Configure organization-wide policies to automatically check for violations durin
 
 ## Prerequisites
 - An active project in CloudPie
-- User with roles that has permissions to Update Org Policy Settings
+- User with roles to Update Org Policy Settings
 
 ### Repository Details
 - **Repository URL** (Required)  

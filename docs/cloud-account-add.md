@@ -4,7 +4,7 @@ A cloud account represents your specific account within a cloud provider platfor
 
 ## Prerequisites
 - An active CloudPie project
-- User with roles that has permissions to create Cloud Cloud Accounts.
+- User with roles with permissions to create Cloud Cloud Accounts.
 
 ## Step-by-Step Guide
 

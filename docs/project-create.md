@@ -4,7 +4,7 @@ Learn how to create and configure new projects in CloudPie.
 
 ## Prerequisites
 - Users must be already onboarded to CloudPie
-- User that has Org level permissions to create project
+- User with Org level permissions to create project
 
 ## Creating a Project
 

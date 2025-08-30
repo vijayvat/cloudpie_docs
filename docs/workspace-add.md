@@ -1,27 +1,50 @@
-### Adding a Workspace
+# Adding a Workspace
 
-To add a workspace, follow these steps:
+Create a workspace for managing Terraform deployments. Define variables and secrets with the highest precedence over project and cloud account levels. Deploy configurations sourced from your linked Git repositories.
+
+## Prerequisites
+- An active project in CloudPie
+- Cloud account to be associated in workspace is added to project
+- Git repository containing Terraform configurations added to Project
+- User with permissions to create workspaces
+
+## Creating a Workspace
 
 1. **Access the Project:**
-   - Navigate to the **Dashboard** and select the project where you want to create the workspace.
-   - Once inside the project, locate the **"Add Workspace"** menu in the sidebar (this menu is only visible when a project is selected).
+   - Navigate to the **Dashboard**
+   - Select your target project
+   - Click **Create Workspace** in the sidebar
 
-2. **Open the Add Workspace Form:**
-   - Click on the **"Add Workspace"** menu to open the form.
+2. **Configure Workspace Settings:**
+   - **Workspace Name** (required)
+     Enter a unique identifier for your workspace
+   
+   - **Description** (optional)
+     Add details about the workspace purpose
 
-3. **Fill Out the Form:**
-   - **Workspace Type:** The workspace type is automatically set to **Terraform**, as it is the only supported type currently.
-   - **Provide the Workspace Details:**
-     - **Name:** Enter a unique name for the workspace.
-     - **Description:** Provide a brief description of the workspace.
-     - **Terraform Version:** Select the Terraform version to be used.
-   - **Add Variables and Secrets (Optional):**
-     - Add custom variables and secrets that will be injected into the workspace during Terraform runs.
-     - Variables marked as **secrets** are encrypted, securely stored, and decrypted **just in time** during execution.
+   - **Terraform Version**
+     Specify the version (e.g., 1.5.7)
 
-4. **Submit the Form:**
-   - Review the details and click **Submit** to create the workspace.
+3. **Link Resources:**
+   - **Git Repository**
+     Select from available repositories containing Terraform code
+   
+   - **Cloud Account**
+     Choose the target cloud account for deployments
 
-***Example Image: Add Workspace form***
+4. **Add Variables (Optional):**
+   - Click **Add Variable** to define workspace-specific variables
+   - Variables defined here take precedence over project and cloud account variables
 
-![Screenshot of Add Workspace Form](images/add_workspace.png)
+5. Click **Create Workspace** to finish setup
+
+![Screenshot of Create Workspace form](images/add_workspace.png)
+
+## Important Notes
+- Workspace names must be unique within a project
+- Git repository must contain valid Terraform configurations
+- Variables are encrypted and securely stored
+- State files are managed automatically
+- Conflicts are prevented through state locking
+
+---
