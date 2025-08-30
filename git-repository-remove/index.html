@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../project-create/">
-      
-      
-        <link rel="next" href="../project-edit/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Viewing Projects - Cloudpie User Guide</title>
+        <title>Remove Git Repositories linked to project - Cloudpie User Guide</title>
       
     
     
@@ -72,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#viewing-all-projects" class="md-skip">
+        <a href="#remove-git-repositories-linked-to-project" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Viewing Projects
+              Remove Git Repositories linked to project
             
           </span>
         </div>
@@ -354,8 +350,6 @@
       
   
   
-    
-  
   
   
     
@@ -367,11 +361,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -385,7 +381,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Projects
@@ -417,28 +413,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Viewing Projects
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../projects-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -447,42 +425,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#viewing-all-projects" class="md-nav__link">
-    <span class="md-ellipsis">
-      Viewing All Projects
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#viewing-a-specific-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      Viewing a Specific Project
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1047,6 +989,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1055,18 +999,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#viewing-all-projects" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Viewing All Projects
+      Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#viewing-a-specific-project" class="md-nav__link">
+  <a href="#deletion-process" class="md-nav__link">
     <span class="md-ellipsis">
-      Viewing a Specific Project
+      Deletion Process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
     </span>
   </a>
   
@@ -1087,26 +1040,49 @@
                   
 
 
-  <h1>Viewing Projects</h1>
-
-<h3 id="viewing-all-projects">Viewing All Projects</h3>
-<p>To view the projects you have created:</p>
+<h1 id="remove-git-repositories-linked-to-project">Remove Git Repositories linked to project</h1>
+<p>Learn how to safely remove Git repositories from your CloudPie project.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>User with permissions to delete Git repositories</li>
+<li>Repository must not be in use by active workspaces</li>
+</ul>
+<h2 id="deletion-process">Deletion Process</h2>
 <ol>
-<li>Navigate to the <strong>View Projects</strong> page by selecting the corresponding option in the sidebar.</li>
-<li>This will display a list of all the projects you have created.</li>
+<li><strong>Access Git Repositories:</strong></li>
+<li>Navigate to the <strong>Dashboard</strong></li>
+<li>Select your target project</li>
+<li>
+<p>Click <strong>View Git Repositories</strong> in the left sidebar menu</p>
+</li>
+<li>
+<p><strong>Initiate Deletion:</strong></p>
+</li>
+<li>Locate the repository you want to remove</li>
+<li>
+<p>Click the delete (trash) icon next to the repository</p>
+</li>
+<li>
+<p><strong>Confirm Deletion:</strong></p>
+</li>
+<li>A confirmation dialog will appear</li>
+<li>Type the exact repository name in the confirmation field</li>
+<li>Check the "I understand this action is irreversible" box</li>
+<li>Click <strong>Delete</strong> to permanently remove the repository</li>
 </ol>
-<p>Below is a screenshot showing an example of the created projects:</p>
-<p><img alt="Screenshot of Created Projects" src="../images/view_projects.png" /></p>
+<p><img alt="Screenshot showing the repository deletion confirmation" src="Images/delete_git_repository.png" /></p>
+<h2 id="important-notes">Important Notes</h2>
+<ul>
+<li>Deletion cannot be undone</li>
+<li>Verify the repository is not used in:</li>
+<li>Active workspaces</li>
+<li>Pipeline configurations</li>
+<li>Policy checks</li>
+<li>Repository deletion does not affect the remote Git repository</li>
+<li>All local configurations and settings will be removed</li>
+<li>Active workspaces using this repository must be deleted first</li>
+</ul>
 <hr />
-<h3 id="viewing-a-specific-project">Viewing a Specific Project</h3>
-<p>To view the details of a specific project:</p>
-<ol>
-<li>Click on the <strong>Settings icon</strong> next to the project you want to view. </li>
-<li>This will open the project's dashboard, providing you with a high-level overview of its various objects and resources.</li>
-<li>Once you access the project's dashboard, the <strong>sidebar</strong> dynamically updates to display <strong>additional links</strong>. These links allow you to efficiently manage project-level resources, such as cloud accounts, users, variables, and more.</li>
-</ol>
-<p>Below is a screenshot showing an example of the project dashboard:</p>
-<p><img alt="Screenshot of Project Dashboard" src="../images/project_dashboard.png" /></p>
 
 
 

@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../project-delete/">
+        <link rel="prev" href="../cloud-credentials-add/">
       
       
         <link rel="next" href="../cloud-accounts-view/">
@@ -70,6 +70,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#adding-cloud-accounts" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -524,6 +529,90 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-credentials-add/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Cloud Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-credentials-view-edit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Cloud Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-credentials-delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Removing Cloud Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-credentials-add/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Cloud Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -533,6 +622,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Adding a Cloud Account
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -543,6 +645,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -645,6 +793,27 @@
   
   <span class="md-ellipsis">
     Managing Cloud Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-org-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring Cloud Organizational Policies
   </span>
   
 
@@ -891,6 +1060,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step-by-Step Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -905,57 +1111,64 @@
                   
 
 
-  <h1>Adding a Cloud Account</h1>
-
-<p>To add a cloud account, follow these steps:</p>
+<h1 id="adding-cloud-accounts">Adding Cloud Accounts</h1>
+<p>A cloud account represents your specific account within a cloud provider platform (AWS Account, GCP Project, or Azure Subscription). You can authenticate these accounts using either existing shared credentials or account-specific credentials.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>An active CloudPie project</li>
+<li>User with roles with permissions to create Cloud Cloud Accounts.</li>
+</ul>
+<h2 id="step-by-step-guide">Step-by-Step Guide</h2>
 <ol>
 <li><strong>Access the Project:</strong></li>
-<li>Navigate to the <strong>Dashboard</strong> and select the project where you want to create the cloud account.</li>
+<li>Navigate to the <strong>Dashboard</strong> and select your project</li>
 <li>
-<p>Once inside the project, locate the <strong>"Add Cloud Account"</strong> menu in the sidebar (this menu is only visible when a project is selected).</p>
+<p>Locate the <strong>"Add Cloud Account"</strong> menu in the sidebar</p>
 </li>
 <li>
-<p><strong>Open the Add Cloud Account Form:</strong></p>
+<p><strong>Fill Out the Account Details:</strong></p>
 </li>
-<li>
-<p>Click on the <strong>"Add Cloud Account"</strong> menu to open the form.</p>
-</li>
-<li>
-<p><strong>Fill Out the Form:</strong></p>
-</li>
-<li><strong>Select the Cloud Platform:</strong> Choose from the currently supported platforms:<ul>
-<li><strong>AWS</strong>: Example account IDs: <code>123456789012</code>, <code>987654321098</code></li>
-<li><strong>GCP</strong>: Example project IDs: <code>123456789012</code>, <code>564738291234</code></li>
-<li><strong>Azure</strong>: Example subscription IDs: <code>11111111-2222-3333-4444-555555555555</code></li>
+<li><strong>Select the Cloud Platform:</strong> Choose from:<ul>
+<li><strong>AWS</strong>: Example account ID: <code>123456789012</code></li>
+<li><strong>GCP</strong>: Example project ID: <code>my-project-123456</code></li>
+<li><strong>Azure</strong>: Example subscription ID: <code>11111111-2222-3333-4444-555555555555</code></li>
 </ul>
 </li>
 <li>
-<p><strong>Specify the Cloud Account ID:</strong> Enter the account/project/subscription ID corresponding to the platform.</p>
+<p><strong>Specify the Cloud Account ID</strong> for your chosen platform</p>
 </li>
 <li>
-<p><strong>Select Authentication Type:</strong></p>
+<p><strong>Choose Authentication Method:</strong>
+   You have two options for authentication:</p>
 </li>
-<li>Choose an authentication type from the list available in dropdown.</li>
-<li>Provide the required credentials or inputs for the selected authentication type.</li>
 </ol>
-<blockquote>
-<p><strong>Note:</strong> The provided credentials must have the necessary permissions to deploy resources and read cloud data. These will be used for:
-   - <strong>Terraform Deployments</strong>
-   - <strong>Cloud Query Runs</strong> (using Steampipe/Powerpipe)</p>
-</blockquote>
+<p>### Option 1: Use Existing Credentials
+   - Select <strong>"Use Existing Credentials"</strong>
+   - Choose from available credentials in the dropdown lookup</p>
+<p>### Option 2: Create Account-Specific Credentials
+   - Select <strong>"Provide New Credentials"</strong>
+   - Choose the authentication type
+   - Provide the required credential details
+   - These credentials will be used only for this cloud account</p>
 <ol>
 <li><strong>Add Variables and Secrets (Optional):</strong></li>
-<li>You can add custom variables and secrets that will be injected into the workspace during runs.</li>
+<li>Add custom variables and secrets for Terraform workspace injection</li>
 <li>
-<p>If a variable is marked as a <strong>secret</strong>, it will be encrypted, securely stored, and decrypted <strong>just in time</strong> during the runs.</p>
+<p>Secrets are encrypted and decrypted just-in-time during runs</p>
 </li>
 <li>
-<p><strong>Submit the Form:</strong></p>
+<p><strong>Submit:</strong></p>
 </li>
-<li>Review the details and click <strong>Submit</strong> to add the cloud account to the project.</li>
+<li>Review all details</li>
+<li>Click <strong>Submit</strong> to create the cloud account</li>
 </ol>
-<p><strong><em>Example Image: Add Cloud Account</em></strong></p>
 <p><img alt="Screenshot of Add Cloud Account Form" src="../images/add_cloud_account.png" /></p>
+<h2 id="important-notes">Important Notes</h2>
+<ul>
+<li>Account-specific credentials work the same way as shared credentials but are only available to this cloud account</li>
+<li>The authentication requirements are identical for both credential types</li>
+<li>You can switch between credential types later by editing the cloud account</li>
+</ul>
 <hr />
 
 

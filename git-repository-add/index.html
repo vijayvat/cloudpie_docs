@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../project-create/">
-      
-      
-        <link rel="next" href="../project-edit/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Viewing Projects - Cloudpie User Guide</title>
+        <title>Adding Git Repositories - Cloudpie User Guide</title>
       
     
     
@@ -72,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#viewing-all-projects" class="md-skip">
+        <a href="#adding-git-repositories" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Viewing Projects
+              Adding Git Repositories
             
           </span>
         </div>
@@ -354,8 +350,6 @@
       
   
   
-    
-  
   
   
     
@@ -367,11 +361,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -385,7 +381,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Projects
@@ -417,28 +413,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Viewing Projects
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../projects-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -447,42 +425,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#viewing-all-projects" class="md-nav__link">
-    <span class="md-ellipsis">
-      Viewing All Projects
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#viewing-a-specific-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      Viewing a Specific Project
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1047,6 +989,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1055,18 +999,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#viewing-all-projects" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Viewing All Projects
+      Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#viewing-a-specific-project" class="md-nav__link">
+  <a href="#step-by-step-guide" class="md-nav__link">
     <span class="md-ellipsis">
-      Viewing a Specific Project
+      Step-by-Step Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
     </span>
   </a>
   
@@ -1087,26 +1040,83 @@
                   
 
 
-  <h1>Viewing Projects</h1>
-
-<h3 id="viewing-all-projects">Viewing All Projects</h3>
-<p>To view the projects you have created:</p>
+<h1 id="adding-git-repositories">Adding Git Repositories</h1>
+<p>Connect your Git repositories to CloudPie projects for managing infrastructure code and policies.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>An active project in CloudPie</li>
+<li>User with permissions to add Git repositories</li>
+<li>Valid Git repository URL</li>
+<li>Repository access token (if repository is private)</li>
+</ul>
+<h2 id="step-by-step-guide">Step-by-Step Guide</h2>
 <ol>
-<li>Navigate to the <strong>View Projects</strong> page by selecting the corresponding option in the sidebar.</li>
-<li>This will display a list of all the projects you have created.</li>
+<li><strong>Access the Project:</strong></li>
+<li>Navigate to the <strong>Dashboard</strong></li>
+<li>Select your target project</li>
+<li>
+<p>Click <strong>Add Git Repository</strong> in the left sidebar menu</p>
+</li>
+<li>
+<p><strong>Configure Repository Settings:</strong></p>
+</li>
+<li>
+<p><strong>Repository URL</strong> (Required)
+     Enter the complete HTTPS URL of your Git repository
+     Example: <code>https://github.com/username/repository.git</code></p>
+</li>
+<li>
+<p><strong>Branch Name</strong> (Optional)
+     Specify the branch to use
+     Default: <code>main</code></p>
+</li>
+<li>
+<p><strong>Set Configuration Paths:</strong> (All Optional)</p>
+</li>
+<li>
+<p><strong>Terraform Configuration Path</strong>
+     Directory containing Terraform configurations
+     Example: <code>/terraform</code></p>
+</li>
+<li>
+<p><strong>Steampipe Queries Path</strong>
+     Location of Steampipe/Powerpipe queries
+     Example: <code>/queries</code></p>
+</li>
+<li>
+<p><strong>Custom Powerpipe Benchmark Path</strong>
+     Directory for custom benchmarks
+     Example: <code>/benchmarks</code></p>
+</li>
+<li>
+<p><strong>Policy Governance Path</strong>
+     Location of policy files
+     Example: <code>/policies</code></p>
+</li>
+<li>
+<p><strong>Add Authentication:</strong> (Optional)</p>
+</li>
+<li>
+<p><strong>Repository Token</strong>
+     Required only for private repositories
+     Example: Personal Access Token with repo access</p>
+</li>
+<li>
+<p><strong>Submit:</strong></p>
+</li>
+<li>Review all entered information</li>
+<li>Click <strong>Submit</strong> to add the repository</li>
 </ol>
-<p>Below is a screenshot showing an example of the created projects:</p>
-<p><img alt="Screenshot of Created Projects" src="../images/view_projects.png" /></p>
+<p><img alt="Screenshot showing Add Git Repository form" src="images/add_git_repo.png" /></p>
+<h2 id="important-notes">Important Notes</h2>
+<ul>
+<li>Repository name is automatically generated from the URL</li>
+<li>All path configurations are optional</li>
+<li>Invalid paths may cause pipeline failures</li>
+<li>Token is required for private repository access</li>
+<li>Changes take effect immediately after submission</li>
+</ul>
 <hr />
-<h3 id="viewing-a-specific-project">Viewing a Specific Project</h3>
-<p>To view the details of a specific project:</p>
-<ol>
-<li>Click on the <strong>Settings icon</strong> next to the project you want to view. </li>
-<li>This will open the project's dashboard, providing you with a high-level overview of its various objects and resources.</li>
-<li>Once you access the project's dashboard, the <strong>sidebar</strong> dynamically updates to display <strong>additional links</strong>. These links allow you to efficiently manage project-level resources, such as cloud accounts, users, variables, and more.</li>
-</ol>
-<p>Below is a screenshot showing an example of the project dashboard:</p>
-<p><img alt="Screenshot of Project Dashboard" src="../images/project_dashboard.png" /></p>
 
 
 

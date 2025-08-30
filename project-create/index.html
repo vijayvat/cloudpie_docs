@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#creating-projects" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -400,6 +405,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Creating a Project
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -410,6 +428,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -535,6 +599,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../cloud-credentials-add/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Cloud Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-credentials-view-edit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Cloud Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-credentials-delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Removing Cloud Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-credentials-add/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Cloud Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cloud-account-add/" class="md-nav__link">
         
   
@@ -645,6 +793,27 @@
   
   <span class="md-ellipsis">
     Managing Cloud Alerts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-org-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring Cloud Organizational Policies
   </span>
   
 
@@ -891,6 +1060,43 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -905,20 +1111,51 @@
                   
 
 
-  <h1>Creating a Project</h1>
-
-<p>To create a new project in Cloudpie:</p>
+<h1 id="creating-projects">Creating Projects</h1>
+<p>Learn how to create and configure new projects in CloudPie.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Users must be already onboarded to CloudPie</li>
+<li>User with Org level permissions to create project</li>
+</ul>
+<h2 id="creating-a-project">Creating a Project</h2>
 <ol>
-<li>Navigate to the <strong>Dashboard</strong> and click on the <strong>"Create Project"</strong> menu in the sidebar.</li>
-<li>Fill out the <strong>Create Project</strong> form:</li>
-<li>Provide a <strong>Name</strong> and <strong>Description</strong> for the project.</li>
-<li>Add members to the project by specifying their email addresses and assigning them the desired roles.</li>
-<li>You may optionally add variables and secrets which gets added to the variables store securely.   </li>
-<li>Once the form is complete, click <strong>Submit</strong> to create the project.</li>
+<li>
+<p>Navigate to the <strong>Dashboard</strong> and click <strong>Create Project</strong> in the sidebar</p>
+</li>
+<li>
+<p>Fill out the project details:</p>
+</li>
+<li><strong>Project Name</strong> (required)</li>
+<li>
+<p><strong>Description</strong> (optional)</p>
+</li>
+<li>
+<p>Add Project Members:</p>
+</li>
+<li>Enter email addresses of existing CloudPie users</li>
+<li>
+<p>Assign one or more project roles (see <a href="project-roles.md">Project Roles</a> for details)</p>
+</li>
+<li>
+<p>Configure Optional Settings:</p>
+</li>
+<li>Add project variables</li>
+<li>
+<p>Set up project secrets</p>
+</li>
+<li>
+<p>Click <strong>Submit</strong> to create the project</p>
+</li>
 </ol>
-<p>After successfully creating the project, you can view it on the <strong>"View Projects"</strong> page by selecting the corresponding menu option in the sidebar.</p>
-<p><strong><em>Example Image: Create Project Form</em></strong></p>
 <p><img alt="Screenshot of Create Project form" src="../images/create_project.png" /></p>
+<h2 id="important-notes">Important Notes</h2>
+<ul>
+<li>Users can be assigned multiple roles</li>
+<li>All role assignments can be modified later</li>
+<li>Variables and secrets are stored securely</li>
+</ul>
+<hr />
 
 
 

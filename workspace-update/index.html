@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#editing-a-workspace" class="md-skip">
+        <a href="#updating-workspaces" class="md-skip">
           Skip to content
         </a>
       
@@ -532,6 +532,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../cloud-credentials-add/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Cloud Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-credentials-view-edit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Cloud Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-credentials-delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Removing Cloud Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-credentials-add/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Cloud Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cloud-account-add/" class="md-nav__link">
         
   
@@ -651,6 +735,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-org-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring Cloud Organizational Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -755,6 +860,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -783,6 +890,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -791,9 +900,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#editing-a-workspace" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Editing a Workspace
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing Process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
     </span>
   </a>
   
@@ -933,6 +1060,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -941,9 +1070,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#editing-a-workspace" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Editing a Workspace
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing Process
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
     </span>
   </a>
   
@@ -964,45 +1111,57 @@
                   
 
 
-  <h1>Updating a Workspace</h1>
-
-<h3 id="editing-a-workspace">Editing a Workspace</h3>
-<p>To edit an existing workspace:</p>
-<ol>
-<li><strong>Access the Project and Workspace:</strong></li>
-<li>Navigate to the <strong>Dashboard</strong> and select the project where the workspace is located.</li>
-<li>Once inside the project, locate and click on the <strong>"View Workspaces"</strong> menu in the sidebar.</li>
-<li>
-<p>From the list of workspaces, select the workspace you want to edit.</p>
-</li>
-<li>
-<p><strong>Open the Edit Workspace Form:</strong></p>
-</li>
-<li>Click on the <strong>Edit Workspace</strong> icon next to the selected workspace.</li>
-<li>
-<p>This will open the <strong>Edit Workspace</strong> form, which is pre-populated with the existing details of the workspace.</p>
-</li>
-<li>
-<p><strong>Update the Workspace Details:</strong></p>
-</li>
-<li>
-<p>Modify any of the following fields as needed:</p>
+<h1 id="updating-workspaces">Updating Workspaces</h1>
+<p>Learn how to modify existing workspace settings in CloudPie.</p>
+<h2 id="prerequisites">Prerequisites</h2>
 <ul>
-<li>Workspace <strong>Name</strong> and <strong>Description</strong>.</li>
-<li><strong>Terraform Version</strong>.</li>
-<li><strong>Variables and Secrets</strong>.</li>
+<li>Access to the CloudPie Dashboard</li>
+<li>Project-level permissions to edit workspaces</li>
+<li>Workspace must not have active deployments</li>
 </ul>
+<h2 id="editing-process">Editing Process</h2>
+<ol>
+<li><strong>Access the Workspace:</strong></li>
+<li>Navigate to the <strong>Dashboard</strong></li>
+<li>Select your target project</li>
+<li>Click <strong>View Workspaces</strong> in the sidebar</li>
+<li>
+<p>Locate the workspace you want to modify</p>
+</li>
+<li>
+<p><strong>Open Edit Form:</strong></p>
+</li>
+<li>Click the edit (pencil) icon next to the workspace</li>
+<li>
+<p>The form will show current workspace settings</p>
+</li>
+<li>
+<p><strong>Modify Settings:</strong>
+   You can update:</p>
+</li>
+<li>Workspace description</li>
+<li>Terraform version</li>
+<li>Associated Git repository</li>
+<li>Linked cloud account</li>
+<li>
+<p>Variables and secrets</p>
 </li>
 <li>
 <p><strong>Save Changes:</strong></p>
 </li>
-<li>After making the necessary updates, click <strong>Save</strong> to apply the changes.</li>
+<li>Review your modifications</li>
+<li>Click <strong>Update Workspace</strong> to apply changes</li>
 </ol>
-<blockquote>
-<p><strong>Note:</strong> The Edit Workspace form is identical to the Create Workspace form, with all fields pre-filled with the workspace's current details.</p>
-</blockquote>
-<p><strong><em>Example Image: Edit Workspace Form</em></strong></p>
 <p><img alt="Screenshot of Edit Workspace Form" src="../images/edit_workspace.png" /></p>
+<h2 id="important-notes">Important Notes</h2>
+<ul>
+<li>Workspace name cannot be changed after creation</li>
+<li>Changes may require workspace reinitialization</li>
+<li>Active deployments should be completed first</li>
+<li>Variable updates affect future runs only</li>
+<li>State files remain unchanged during edits</li>
+</ul>
+<hr />
 
 
 

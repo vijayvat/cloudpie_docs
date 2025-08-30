@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../project-create/">
-      
-      
-        <link rel="next" href="../project-edit/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Viewing Projects - Cloudpie User Guide</title>
+        <title>Project Roles and Permissions - Cloudpie User Guide</title>
       
     
     
@@ -72,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#viewing-all-projects" class="md-skip">
+        <a href="#project-roles-and-permissions" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Viewing Projects
+              Project Roles and Permissions
             
           </span>
         </div>
@@ -354,8 +350,6 @@
       
   
   
-    
-  
   
   
     
@@ -367,11 +361,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -385,7 +381,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Projects
@@ -417,28 +413,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Viewing Projects
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../projects-view/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -447,42 +425,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#viewing-all-projects" class="md-nav__link">
-    <span class="md-ellipsis">
-      Viewing All Projects
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#viewing-a-specific-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      Viewing a Specific Project
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1047,6 +989,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1055,18 +999,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#viewing-all-projects" class="md-nav__link">
+  <a href="#available-roles" class="md-nav__link">
     <span class="md-ellipsis">
-      Viewing All Projects
+      Available Roles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Available Roles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-management-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Management Roles
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-account-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cloud Account Roles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-repository-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git Repository Roles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workspace-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workspace Roles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credential-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credential Roles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insight-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insight Roles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#viewing-a-specific-project" class="md-nav__link">
+  <a href="#important-notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Viewing a Specific Project
+      Important Notes
     </span>
   </a>
   
@@ -1087,26 +1091,55 @@
                   
 
 
-  <h1>Viewing Projects</h1>
-
-<h3 id="viewing-all-projects">Viewing All Projects</h3>
-<p>To view the projects you have created:</p>
-<ol>
-<li>Navigate to the <strong>View Projects</strong> page by selecting the corresponding option in the sidebar.</li>
-<li>This will display a list of all the projects you have created.</li>
-</ol>
-<p>Below is a screenshot showing an example of the created projects:</p>
-<p><img alt="Screenshot of Created Projects" src="../images/view_projects.png" /></p>
+<h1 id="project-roles-and-permissions">Project Roles and Permissions</h1>
+<p>Learn about available roles and their permissions in CloudPie projects.</p>
+<h2 id="available-roles">Available Roles</h2>
+<h3 id="project-management-roles">Project Management Roles</h3>
+<ul>
+<li><strong>Project Admin</strong>: Full access to all project features</li>
+<li><strong>Project Editor</strong>: Can edit project settings</li>
+<li><strong>Project Viewer</strong>: Read-only access</li>
+</ul>
+<h3 id="cloud-account-roles">Cloud Account Roles</h3>
+<ul>
+<li><strong>Cloud Account Admin</strong>: Manage all cloud account features</li>
+<li><strong>Cloud Account Editor</strong>: Create and modify cloud accounts</li>
+<li><strong>Cloud Account Viewer</strong>: View cloud accounts</li>
+<li><strong>Cloud Account Query Manager</strong>: Run and schedule queries</li>
+</ul>
+<h3 id="git-repository-roles">Git Repository Roles</h3>
+<ul>
+<li><strong>Git Repo Admin</strong>: Full repository management</li>
+<li><strong>Git Repo Editor</strong>: Add and modify repositories</li>
+<li><strong>Git Repo Viewer</strong>: View repositories</li>
+</ul>
+<h3 id="workspace-roles">Workspace Roles</h3>
+<ul>
+<li><strong>Workspace Admin</strong>: Full workspace control</li>
+<li><strong>Workspace Editor</strong>: Create and modify workspaces</li>
+<li><strong>Workspace Viewer</strong>: View workspaces</li>
+<li><strong>Workspace Deployment Manager</strong>: Execute deployments</li>
+</ul>
+<h3 id="credential-roles">Credential Roles</h3>
+<ul>
+<li><strong>Credential Admin</strong>: Manage all credentials</li>
+<li><strong>Credential Editor</strong>: Add and modify credentials</li>
+<li><strong>Credential Viewer</strong>: View credentials</li>
+</ul>
+<h3 id="insight-roles">Insight Roles</h3>
+<ul>
+<li><strong>Insight Admin</strong>: Full insight management</li>
+<li><strong>Insight Trigger</strong>: Run insights</li>
+<li><strong>Insight Viewer</strong>: View insight data</li>
+</ul>
+<h2 id="important-notes">Important Notes</h2>
+<ul>
+<li>Users can have multiple roles</li>
+<li>Roles determine access to specific project features</li>
+<li>Role permissions are cumulative</li>
+<li>Changes to roles take effect immediately</li>
+</ul>
 <hr />
-<h3 id="viewing-a-specific-project">Viewing a Specific Project</h3>
-<p>To view the details of a specific project:</p>
-<ol>
-<li>Click on the <strong>Settings icon</strong> next to the project you want to view. </li>
-<li>This will open the project's dashboard, providing you with a high-level overview of its various objects and resources.</li>
-<li>Once you access the project's dashboard, the <strong>sidebar</strong> dynamically updates to display <strong>additional links</strong>. These links allow you to efficiently manage project-level resources, such as cloud accounts, users, variables, and more.</li>
-</ol>
-<p>Below is a screenshot showing an example of the project dashboard:</p>
-<p><img alt="Screenshot of Project Dashboard" src="../images/project_dashboard.png" /></p>
 
 
 

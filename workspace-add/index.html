@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../cloud-alerts/">
+        <link rel="prev" href="../cloud-org-policy/">
       
       
         <link rel="next" href="../workspaces-view/">
@@ -532,6 +532,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../cloud-credentials-add/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Cloud Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-credentials-view-edit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating Cloud Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-credentials-delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Removing Cloud Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-credentials-add/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Cloud Credentials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../cloud-account-add/" class="md-nav__link">
         
   
@@ -651,6 +735,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloud-org-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring Cloud Organizational Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -713,6 +818,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -741,6 +848,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -749,9 +858,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#adding-a-workspace" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding a Workspace
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Workspace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
     </span>
   </a>
   
@@ -933,6 +1060,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -941,9 +1070,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#adding-a-workspace" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding a Workspace
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Workspace
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Notes
     </span>
   </a>
   
@@ -964,46 +1111,70 @@
                   
 
 
-  <h1>Adding a Workspace</h1>
-
-<h3 id="adding-a-workspace">Adding a Workspace</h3>
-<p>To add a workspace, follow these steps:</p>
+<h1 id="adding-a-workspace">Adding a Workspace</h1>
+<p>Create a workspace for managing Terraform deployments. Define variables and secrets with the highest precedence over project and cloud account levels. Deploy configurations sourced from your linked Git repositories.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>An active project in CloudPie</li>
+<li>Cloud account to be associated in workspace is added to project</li>
+<li>Git repository containing Terraform configurations added to Project</li>
+<li>User with permissions to create workspaces</li>
+</ul>
+<h2 id="creating-a-workspace">Creating a Workspace</h2>
 <ol>
 <li><strong>Access the Project:</strong></li>
-<li>Navigate to the <strong>Dashboard</strong> and select the project where you want to create the workspace.</li>
+<li>Navigate to the <strong>Dashboard</strong></li>
+<li>Select your target project</li>
 <li>
-<p>Once inside the project, locate the <strong>"Add Workspace"</strong> menu in the sidebar (this menu is only visible when a project is selected).</p>
-</li>
-<li>
-<p><strong>Open the Add Workspace Form:</strong></p>
+<p>Click <strong>Create Workspace</strong> in the sidebar</p>
 </li>
 <li>
-<p>Click on the <strong>"Add Workspace"</strong> menu to open the form.</p>
+<p><strong>Configure Workspace Settings:</strong></p>
 </li>
 <li>
-<p><strong>Fill Out the Form:</strong></p>
-</li>
-<li><strong>Workspace Type:</strong> The workspace type is automatically set to <strong>Terraform</strong>, as it is the only supported type currently.</li>
-<li><strong>Provide the Workspace Details:</strong><ul>
-<li><strong>Name:</strong> Enter a unique name for the workspace.</li>
-<li><strong>Description:</strong> Provide a brief description of the workspace.</li>
-<li><strong>Terraform Version:</strong> Select the Terraform version to be used.</li>
-</ul>
+<p><strong>Workspace Name</strong> (required)
+     Enter a unique identifier for your workspace</p>
 </li>
 <li>
-<p><strong>Add Variables and Secrets (Optional):</strong></p>
-<ul>
-<li>Add custom variables and secrets that will be injected into the workspace during Terraform runs.</li>
-<li>Variables marked as <strong>secrets</strong> are encrypted, securely stored, and decrypted <strong>just in time</strong> during execution.</li>
-</ul>
+<p><strong>Description</strong> (optional)
+     Add details about the workspace purpose</p>
 </li>
 <li>
-<p><strong>Submit the Form:</strong></p>
+<p><strong>Terraform Version</strong>
+     Specify the version (e.g., 1.5.7)</p>
 </li>
-<li>Review the details and click <strong>Submit</strong> to create the workspace.</li>
+<li>
+<p><strong>Link Resources:</strong></p>
+</li>
+<li>
+<p><strong>Git Repository</strong>
+     Select from available repositories containing Terraform code</p>
+</li>
+<li>
+<p><strong>Cloud Account</strong>
+     Choose the target cloud account for deployments</p>
+</li>
+<li>
+<p><strong>Add Variables (Optional):</strong></p>
+</li>
+<li>Click <strong>Add Variable</strong> to define workspace-specific variables</li>
+<li>
+<p>Variables defined here take precedence over project and cloud account variables</p>
+</li>
+<li>
+<p>Click <strong>Create Workspace</strong> to finish setup</p>
+</li>
 </ol>
-<p><strong><em>Example Image: Add Workspace form</em></strong></p>
-<p><img alt="Screenshot of Add Workspace Form" src="../images/add_workspace.png" /></p>
+<p><img alt="Screenshot of Create Workspace form" src="../images/add_workspace.png" /></p>
+<h2 id="important-notes">Important Notes</h2>
+<ul>
+<li>Workspace names must be unique within a project</li>
+<li>Git repository must contain valid Terraform configurations</li>
+<li>Variables are encrypted and securely stored</li>
+<li>State files are managed automatically</li>
+<li>Conflicts are prevented through state locking</li>
+</ul>
+<hr />
 
 
 
