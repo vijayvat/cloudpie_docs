@@ -1,14 +1,34 @@
-To create a new project in Cloudpie:
+# Creating Projects
 
-1. Navigate to the **Dashboard** and click on the **"Create Project"** menu in the sidebar.
-2. Fill out the **Create Project** form:
-   - Provide a **Name** and **Description** for the project.
-   - Add members to the project by specifying their email addresses and assigning them the desired roles.
-3. You may optionally add variables and secrets which gets added to the variables store securely.   
-4. Once the form is complete, click **Submit** to create the project.
+Learn how to create and configure new projects in CloudPie.
 
-After successfully creating the project, you can view it on the **"View Projects"** page by selecting the corresponding menu option in the sidebar.
+## Prerequisites
+- Users must be already onboarded to CloudPie
+- User that has Org level permissions to create project
 
-***Example Image: Create Project Form***
+## Creating a Project
+
+1. Navigate to the **Dashboard** and click **Create Project** in the sidebar
+
+2. Fill out the project details:
+   - **Project Name** (required)
+   - **Description** (optional)
+
+3. Add Project Members:
+   - Enter email addresses of existing CloudPie users
+   - Assign one or more project roles (see [Project Roles](project-roles.md) for details)
+
+4. Configure Optional Settings:
+   - Add project variables
+   - Set up project secrets
+
+5. Click **Submit** to create the project
 
 ![Screenshot of Create Project form](images/create_project.png)
+
+## Important Notes
+- Users can be assigned multiple roles
+- All role assignments can be modified later
+- Variables and secrets are stored securely
+
+---

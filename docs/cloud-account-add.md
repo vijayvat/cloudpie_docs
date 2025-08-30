@@ -1,36 +1,50 @@
-To add a cloud account, follow these steps:
+# Adding Cloud Accounts
+
+A cloud account represents your specific account within a cloud provider platform (AWS Account, GCP Project, or Azure Subscription). You can authenticate these accounts using either existing shared credentials or account-specific credentials.
+
+## Prerequisites
+- An active CloudPie project
+- User with roles that has permissions to create Cloud Cloud Accounts.
+
+## Step-by-Step Guide
 
 1. **Access the Project:**
-   - Navigate to the **Dashboard** and select the project where you want to create the cloud account.
-   - Once inside the project, locate the **"Add Cloud Account"** menu in the sidebar (this menu is only visible when a project is selected).
+   - Navigate to the **Dashboard** and select your project
+   - Locate the **"Add Cloud Account"** menu in the sidebar
 
-2. **Open the Add Cloud Account Form:**
-   - Click on the **"Add Cloud Account"** menu to open the form.
+2. **Fill Out the Account Details:**
+   - **Select the Cloud Platform:** Choose from:
+     - **AWS**: Example account ID: `123456789012`
+     - **GCP**: Example project ID: `my-project-123456`
+     - **Azure**: Example subscription ID: `11111111-2222-3333-4444-555555555555`
+   - **Specify the Cloud Account ID** for your chosen platform
 
-3. **Fill Out the Form:**
-   - **Select the Cloud Platform:** Choose from the currently supported platforms:
-     - **AWS**: Example account IDs: `123456789012`, `987654321098`
-     - **GCP**: Example project IDs: `123456789012`, `564738291234`
-     - **Azure**: Example subscription IDs: `11111111-2222-3333-4444-555555555555`
-   - **Specify the Cloud Account ID:** Enter the account/project/subscription ID corresponding to the platform.
+3. **Choose Authentication Method:**
+   You have two options for authentication:
 
-4. **Select Authentication Type:**
-   - Choose an authentication type from the list available in dropdown.
-   - Provide the required credentials or inputs for the selected authentication type.
+   ### Option 1: Use Existing Credentials
+   - Select **"Use Existing Credentials"**
+   - Choose from available credentials in the dropdown lookup
 
-   > **Note:** The provided credentials must have the necessary permissions to deploy resources and read cloud data. These will be used for:
-   - **Terraform Deployments**
-   - **Cloud Query Runs** (using Steampipe/Powerpipe)
+   ### Option 2: Create Account-Specific Credentials
+   - Select **"Provide New Credentials"**
+   - Choose the authentication type
+   - Provide the required credential details
+   - These credentials will be used only for this cloud account
 
-5. **Add Variables and Secrets (Optional):**
-   - You can add custom variables and secrets that will be injected into the workspace during runs.
-   - If a variable is marked as a **secret**, it will be encrypted, securely stored, and decrypted **just in time** during the runs.
+4. **Add Variables and Secrets (Optional):**
+   - Add custom variables and secrets for Terraform workspace injection
+   - Secrets are encrypted and decrypted just-in-time during runs
 
-6. **Submit the Form:**
-   - Review the details and click **Submit** to add the cloud account to the project.
-
-***Example Image: Add Cloud Account***
+5. **Submit:**
+   - Review all details
+   - Click **Submit** to create the cloud account
 
 ![Screenshot of Add Cloud Account Form](images/add_cloud_account.png)
+
+## Important Notes
+- Account-specific credentials work the same way as shared credentials but are only available to this cloud account
+- The authentication requirements are identical for both credential types
+- You can switch between credential types later by editing the cloud account
 
 ---

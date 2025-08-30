@@ -1,17 +1,39 @@
-### Editing a Project
+# Editing Projects
 
-To make changes to an existing project, follow these steps:
+Learn how to modify existing project settings in CloudPie.
 
-1. Navigate to the **"View Projects"** page from the sidebar and select the project you want to update.
-2. This will take you to the **Project Dashboard** for the selected project.
-3. In the sidebar, under the selected project, the **"Edit Project"** menu will become available. Click on it to access the **Edit Project** page.
-4. On the **Edit Project** page, your existing project settings will be displayed in a pre-populated form.
-5. Make the necessary updates, such as:
-   - Updating the project description.
-   - Managing users and their permissions.
-   - Modifying variables and secrets.
-6. Once you've made your changes, click **Submit** to save the updates.
+## Prerequisites
+- Access to the CloudPie Dashboard
+- Project admin or editor permissions
 
-***Example Image: Delete Project Form***
+## Editing Process
+
+1. **Access the Project:**
+   - Navigate to the **Dashboard**
+   - Click **View Projects** in the sidebar
+   - Select the project you want to modify
+
+2. **Open Edit Form:**
+   - Click **Edit Project** in the sidebar
+   - The form will show current project settings
+
+3. **Modify Settings:**
+   You can update:
+   - Project description
+   - Team members and their roles
+   - Project variables
+   - Stored secrets
+
+4. **Save Changes:**
+   - Review your modifications
+   - Click **Submit** to apply updates
 
 ![Screenshot of Edit Project form](images/edit_project.png)
+
+## Important Notes
+- Project name cannot be changed after creation
+- Role changes take effect immediately
+- Active workspaces may need redeployment
+- Secret updates affect future deployments only
+
+---

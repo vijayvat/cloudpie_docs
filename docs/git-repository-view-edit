@@ -1,0 +1,48 @@
+# Viewing and Editing Git Repositories
+
+View and manage Git repositories connected to your CloudPie project.
+
+## Viewing Repositories
+
+1. **Access Git Repositories:**
+   - Navigate to the **Dashboard**
+   - Select your target project
+   - Click **View Git Repositories** in the left sidebar menu
+
+2. **This page allows you to**
+   - View all repositories in a sortable list
+   - Use the search bar to find specific repositories
+
+## Editing a Repository
+
+1. **Open Edit Form:**
+   - Locate the repository you want to modify
+   - Click the edit (pencil) icon next to the repository
+
+2. **Modifiable Settings:**
+   - **Branch Name**
+     Current branch being used
+     Example: `main`, `develop`
+
+   - **Configuration Paths:**
+     - Terraform Configuration Path
+     - Steampipe Queries Path
+     - Custom Powerpipe Benchmark Path
+     - Policy Governance Path
+
+   - **Repository Token**
+     Update access token for private repositories
+
+3. **Save Changes:**
+   - Review your modifications
+   - Click **Update Repository** to apply changes
+
+![Screenshot showing the Edit Git Repository form](images/edit_git_repository.png)
+
+## Important Notes
+- Repository URL and name cannot be modified after creation
+- Path changes affect pipeline configurations
+- Token updates take effect immediately
+- Active workspaces may need redeployment after changes
+
+---

@@ -39,6 +39,7 @@ nav:
       - Updating a Project: project-edit.md
       - Deleting a project: project-delete.md
   - Cloud Accounts:
+      - Adding cloud Credentials: cloud-credentials-add.md
       - Adding a Cloud Account: cloud-account-add.md
       - Viewing Cloud Accounts: cloud-accounts-view.md
       - Querying Cloud Accounts: cloud-accounts-querying.md
