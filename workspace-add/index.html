@@ -1321,7 +1321,10 @@
 
 
 <h1 id="adding-a-workspace">Adding a Workspace</h1>
-<p>Create a workspace for managing Terraform deployments. Define variables and secrets with the highest precedence over project and cloud account levels. Deploy configurations sourced from your linked Git repositories.</p>
+<p>Create a workspace for managing Terraform deployments using <strong>OpenTofu</strong>.<br />
+OpenTofu is an <strong>open-source, community-driven alternative to Terraform</strong>, maintained under the Linux Foundation. It is a <strong>drop-in replacement for Terraform</strong> and fully compatible with both new and existing Terraform configurations. By specifying the OpenTofu version in your workspace, you ensure that your deployments run consistently across environments.</p>
+<p>➡️ Learn more about OpenTofu here: <a href="https://opentofu.org">https://opentofu.org</a></p>
+<hr />
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li>An active project in CloudPie</li>
@@ -1329,6 +1332,7 @@
 <li>Git repository containing Terraform configurations added to Project</li>
 <li>User with permissions to create workspaces</li>
 </ul>
+<hr />
 <h2 id="creating-a-workspace">Creating a Workspace</h2>
 <ol>
 <li><strong>Access the Project:</strong></li>
@@ -1341,32 +1345,33 @@
 <p><strong>Configure Workspace Settings:</strong></p>
 </li>
 <li>
-<p><strong>Workspace Name</strong> (required)
+<p><strong>Workspace Name</strong> (required)<br />
      Enter a unique identifier for your workspace</p>
 </li>
 <li>
-<p><strong>Description</strong> (optional)
+<p><strong>Description</strong> (optional)<br />
      Add details about the workspace purpose</p>
 </li>
 <li>
-<p><strong>Terraform Version</strong>
-     Specify the version (e.g., 1.5.7)</p>
+<p><strong>OpenTofu Version</strong><br />
+     Specify the version of OpenTofu to use (e.g., <code>1.5.7</code>).<br />
+     OpenTofu ensures compatibility with Terraform code, so you can continue to use your existing Terraform configurations without modification.</p>
 </li>
 <li>
 <p><strong>Link Resources:</strong></p>
 </li>
 <li>
-<p><strong>Git Repository</strong>
-     Select from available repositories containing Terraform code</p>
+<p><strong>Git Repository</strong><br />
+     Select from available repositories containing Terraform/OpenTofu code</p>
 </li>
 <li>
-<p><strong>Cloud Account</strong>
+<p><strong>Cloud Account</strong><br />
      Choose the target cloud account for deployments</p>
 </li>
 <li>
 <p><strong>Add Variables (Optional):</strong></p>
 </li>
-<li>Click <strong>Add Variable</strong> to define workspace-specific variables</li>
+<li>Click <strong>Add Variable</strong> to define workspace-specific variables  </li>
 <li>
 <p>Variables defined here take precedence over project and cloud account variables</p>
 </li>
@@ -1375,15 +1380,15 @@
 </li>
 </ol>
 <p><img alt="Screenshot of Create Workspace form" src="../images/add_workspace.png" /></p>
+<hr />
 <h2 id="important-notes">Important Notes</h2>
 <ul>
 <li>Workspace names must be unique within a project</li>
-<li>Git repository must contain valid Terraform configurations</li>
+<li>Git repository must contain valid Terraform configurations (works the same with OpenTofu)</li>
 <li>Variables are encrypted and securely stored</li>
 <li>State files are managed automatically</li>
 <li>Conflicts are prevented through state locking</li>
 </ul>
-<hr />
 
 
 

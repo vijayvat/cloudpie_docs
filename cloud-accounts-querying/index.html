@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#querying-cloud-resources" class="md-skip">
+        <a href="#benchmarks-and-queries" class="md-skip">
           Skip to content
         </a>
       
@@ -865,9 +865,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#executing-a-query" class="md-nav__link">
+  <a href="#running-a-benchmark-or-query" class="md-nav__link">
     <span class="md-ellipsis">
-      Executing a Query
+      Running a Benchmark or Query
     </span>
   </a>
   
@@ -883,25 +883,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scheduling-queries" class="md-nav__link">
+  <a href="#scheduling-runs" class="md-nav__link">
     <span class="md-ellipsis">
-      Scheduling Queries
+      Scheduling Runs
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#manage-scheduled-runs" class="md-nav__link">
     <span class="md-ellipsis">
       Manage Scheduled Runs
@@ -909,18 +899,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#notes-on-querying-cloud-resources" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-running-benchmarks-and-queries" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes on Querying Cloud Resources
+      Notes on Running Benchmarks and Queries
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1312,9 +1297,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#executing-a-query" class="md-nav__link">
+  <a href="#running-a-benchmark-or-query" class="md-nav__link">
     <span class="md-ellipsis">
-      Executing a Query
+      Running a Benchmark or Query
     </span>
   </a>
   
@@ -1330,25 +1315,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scheduling-queries" class="md-nav__link">
+  <a href="#scheduling-runs" class="md-nav__link">
     <span class="md-ellipsis">
-      Scheduling Queries
+      Scheduling Runs
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#manage-scheduled-runs" class="md-nav__link">
     <span class="md-ellipsis">
       Manage Scheduled Runs
@@ -1356,18 +1331,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#notes-on-querying-cloud-resources" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-running-benchmarks-and-queries" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes on Querying Cloud Resources
+      Notes on Running Benchmarks and Queries
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1386,96 +1356,97 @@
                   
 
 
-<h1 id="querying-cloud-resources">Querying Cloud Resources</h1>
-<p>Cloudpie allows you to query your cloud resources directly from within the platform, providing flexible options to either run queries immediately or schedule them for periodic execution. This section will guide you through the steps for both approaches and how to manage queries effectively.</p>
+<h1 id="benchmarks-and-queries">Benchmarks and Queries</h1>
+<p>Cloudpie allows you to run <strong>benchmarks</strong> and <strong>queries</strong> on your connected cloud accounts. You can execute them immediately or schedule them for recurring runs. This section explains how to use the query form, run immediate checks, and manage scheduled runs.</p>
 <hr />
-<h3 id="executing-a-query">Executing a Query</h3>
-<p>To execute a query for a specific cloud account:</p>
+<h3 id="running-a-benchmark-or-query">Running a Benchmark or Query</h3>
+<p>To execute a Benchmark or a Query on a specific cloud account:</p>
 <ol>
-<li>Access the Cloud Account Page:</li>
-<li>Navigate to the <strong>Dashboard</strong>, select the project, and open the <strong>View Cloud Accounts</strong> menu.</li>
-<li>From the list of cloud accounts, click on the <strong>Settings icon</strong> for the desired account to open its <strong>Cloud Account Page</strong>. Here, next to the basic cloud account details, you will find the Steampipe Query Execution form.</li>
+<li><strong>Access the Cloud Account Page</strong></li>
+<li>From the <strong>Dashboard</strong>, select the project and open the <strong>View Cloud Accounts</strong> menu.  </li>
+<li>Choose the desired cloud account to open its <strong>Cloud Account Page</strong>. Alongside the account details, you will see the <strong>Benchmark &amp; Query Execution form</strong>.</li>
 </ol>
-<p><strong><em>Example Image: Cloud Account Page</em></strong></p>
-<p><img alt="Screenshot of Cloud Account Page" src="../images/schedule_or_run_cloud_query_1.png" /></p>
+<p><strong><em>Example Image: Cloud Account Page</em></strong><br />
+<img alt="Screenshot of Cloud Account Page" src="../images/schedule_or_run_cloud_query_1.png" /></p>
 <ol>
-<li><strong>Fill Out the Query Execution Form:</strong><ul>
-<li><strong>Query</strong>: Select this option to execute custom Steampipe SQL queries from a Git repository.</li>
-<li><strong>Benchmark</strong>: Select this option to execute the latest CIS benchmark for the associated cloud platform.</li>
-<li><strong>Powerpipe Version (optional)</strong>: Specify the Powerpipe version to use, or leave it as the default (<code>latest</code>).</li>
-<li><strong>Steampipe Version (optional)</strong>: Specify the Steampipe version to use, or leave it as the default (<code>latest</code>).</li>
-<li><strong>Plugin Version</strong>: Specify the plugin version to use, or leave it as the default (<code>latest</code>).</li>
-<li><strong>Git Repository (For Query Runs):</strong> Use the dropdown to search and select a Git repository registered within the project. Ensure the repository contains valid <code>.sql</code> files and the <code>steampipe_queries_path</code> is set to a path containing the <code>.sql</code> files</li>
+<li><strong>Fill Out the Execution Form</strong></li>
+<li><strong>Run Type</strong>:  <ul>
+<li><em>Benchmark</em>: Run one of the predefined benchmark categories (e.g., Compliance, Cost, Access Risks).  </li>
+<li><em>Query</em>: Run a custom SQL query from a registered Git repository.</li>
 </ul>
 </li>
-<li><strong>Execution Type:</strong><ul>
-<li><strong>Immediate</strong>: Executes the query as soon as you submit the form.</li>
-<li><strong>Schedule</strong>: Allows you to configure a schedule for recurring query execution.</li>
+<li><strong>Benchmark Type</strong>:  <ul>
+<li><em>Auto Benchmark</em>: Automatically provides checks under the chosen category.  </li>
+<li><em>Custom Benchmark</em>: Allows selection of a specific benchmark from the available list.</li>
 </ul>
 </li>
-<li><strong>Task Timeout (Optional):</strong><ul>
-<li>Specify a custom timeout in hours for the task, or leave it as the default (<code>2 hours</code>).</li>
+<li><strong>Benchmark Category</strong>:  <ul>
+<li>Choose the type of checks you want to run (e.g., <em>Compliance</em>, <em>Cost Optimization</em>, <em>Public Access Risks</em>).  </li>
+<li>Once selected, the dropdown for benchmarks is dynamically populated with available checks for that category.</li>
 </ul>
 </li>
-<li><strong>Submit the Form:</strong><ul>
-<li>Once all fields are completed, click <strong>Run Query</strong> to execute the query.</li>
+<li><strong>Execution Type</strong>:  <ul>
+<li><em>Immediate</em>: Executes the query or benchmark right away.  </li>
+<li><em>Schedule</em>: Configure recurring execution.</li>
+</ul>
+</li>
+<li><strong>Task Timeout (Optional)</strong>:  <ul>
+<li>Specify a timeout in hours for the task, or leave it as the default (<code>2 hours</code>).</li>
+</ul>
+</li>
+<li><strong>Submit the Form</strong>:  <ul>
+<li>Click <strong>Run Query</strong> to execute immediately or save as a scheduled run.</li>
 </ul>
 </li>
 </ol>
 <hr />
 <h3 id="immediate-run">Immediate Run</h3>
 <ul>
-<li>If a query or benchmark is run with Execution Type set to Immediate, the request is tracked directly on the Cloud Account page.</li>
-<li>An entry showing the <strong>status of the query</strong> appears dynamically, updating in real time.</li>
+<li>When Execution Type is set to <strong>Immediate</strong>, the request is tracked on the Cloud Account page.  </li>
+<li>A new entry appears in the list with real-time updates on the <strong>status of the run</strong>.</li>
 </ul>
-<p><strong><em>Example Image: Form submission and query status</em></strong></p>
-<p><img alt="Screenshot of Query Execution Form" src="../images/schedule_or_run_cloud_query_2.png" /></p>
+<p><strong><em>Example Image: Form submission and query status</em></strong><br />
+<img alt="Screenshot of Query Execution Form" src="../images/schedule_or_run_cloud_query_2.png" /></p>
 <ul>
-<li>Use the <strong>View Logs</strong> button to:<ul>
-<li><strong>Tail live Execution logs</strong> for active runs.</li>
-<li>Access and <strong>download Execution logs</strong> for completed runs.</li>
-<li><strong>Download CSV output of query results</strong> once the run is completed. </li>
+<li>Use the <strong>View Logs</strong> button to:  </li>
+<li>Tail <strong>live logs</strong> for active runs.  </li>
+<li>Access and download logs for completed runs.  </li>
+<li>Download the <strong>CSV output</strong> of query or benchmark results.</li>
 </ul>
-</li>
-</ul>
-<p><strong><em>Example Image: Query execution Logs</em></strong></p>
-<p><img alt="Screenshot of Query Logs Page" src="../images/schedule_or_run_cloud_query_execution_logs.png" /></p>
+<p><strong><em>Example Image: Query execution Logs</em></strong><br />
+<img alt="Screenshot of Query Logs Page" src="../images/schedule_or_run_cloud_query_execution_logs.png" /></p>
 <hr />
-<h3 id="scheduling-queries">Scheduling Queries</h3>
-<p>To schedule a recurring query for a cloud account:</p>
+<h3 id="scheduling-runs">Scheduling Runs</h3>
+<p>To configure a recurring run:</p>
 <ul>
-<li>In the Query Execution Form on the <strong>Cloud Account Page</strong>, select the <strong>Scheduled Run</strong> option for <strong>Execution type</strong>, instead of <strong>Immediate</strong>.</li>
-<li>Choose one of the following scheduling methods:<ul>
-<li><strong>Cron Expression</strong>: Specify a cron pattern (e.g., <code>0 0 * * *</code> for daily runs at midnight).</li>
-<li><strong>Rate Expression</strong>: Define the interval (e.g., <code>rate(2 hours)</code> for every 2 hours).</li>
+<li>In the Execution Form, choose <strong>Schedule</strong> instead of Immediate.  </li>
+<li>Provide one of the following:  </li>
+<li><strong>Cron Expression</strong>: (e.g., <code>0 0 * * *</code> for daily at midnight).  </li>
+<li><strong>Rate Expression</strong>: (e.g., <code>rate(2 hours)</code> for every 2 hours).  </li>
+<li>After scheduling, open the <strong>Scheduled Runs</strong> menu in the sidebar for the cloud account.  </li>
+<li>This page shows the scheduled run alongside others configured for the same account.</li>
 </ul>
-</li>
-<li>After scheduling a query, navigate to the <strong>"Scheduled Runs"</strong> menu in the sidebar for the selected cloud account. </li>
-<li>This page should now include the query run that was scheduled, including the other scheduled query runs scheduled in that cloud account.</li>
-</ul>
-<p><strong><em>Example Image: Scheduled Runs Page</em></strong></p>
-<h2 id="_1"><img alt="Screenshot of Scheduled Runs Page" src="../images/schedules_list.png" /></h2>
+<p><strong><em>Example Image: Scheduled Runs Page</em></strong><br />
+<img alt="Screenshot of Scheduled Runs Page" src="../images/schedules_list.png" /></p>
+<hr />
 <h3 id="manage-scheduled-runs">Manage Scheduled Runs</h3>
 <ul>
-<li>To manage a scheduled run, click on a specifc run to open a page containing additional details and all the periodic runs created by that schedule.</li>
-<li>Enable or disable a scheduled run to pause or resume execution as needed.</li>
-<li>On the same page view all historical runs associated with it.</li>
-<li>For each run created by the schedule you can view the logs. Click <strong>View Logs</strong> against the run to:<ul>
-<li><strong>Tail live Execution logs</strong> for active runs.</li>
-<li>Access and <strong>download Execution logs</strong> for completed runs.</li>
-<li><strong>Download CSV output of query results</strong> once the run is completed. </li>
-</ul>
-</li>
+<li>Click a scheduled run to view its details and history.  </li>
+<li>Enable or disable the schedule to pause or resume execution.  </li>
+<li>Each historical run entry provides access to:  </li>
+<li>Live logs for in-progress runs.  </li>
+<li>Completed logs for past runs.  </li>
+<li>CSV output of the results.</li>
 </ul>
 <hr />
-<h3 id="notes-on-querying-cloud-resources">Notes on Querying Cloud Resources</h3>
+<h3 id="notes-on-running-benchmarks-and-queries">Notes on Running Benchmarks and Queries</h3>
 <ul>
-<li><strong>Git Repository Integration:</strong> Ensure the repository is registered in the project and contains valid <code>.sql</code> files for Steampipe queries. Ensure that the <code>steampipe_queries_path</code> is configured for the repository that is registered.</li>
-<li><strong>Auto Benchmark:</strong> This option automatically runs the latest CIS benchmark for the selected cloud platform, requiring no additional configuration.</li>
-<li><strong>Logs and Status Updates:</strong> The logs and status updates for both immediate and scheduled runs are dynamically updated to provide real-time insights.</li>
-<li><strong>Downloadable Artifacts:</strong> Query results are available as <strong>CSV files</strong> for download. These can be used in:</li>
-<li><strong>ETL Pipelines</strong>: Transform and load the data into other systems.</li>
-<li><strong>AI Operations</strong>: Feed the data into AI/ML tools for advanced analytics and insights.</li>
+<li><strong>Auto Benchmark</strong>: Automatically provides checks under the chosen category (Compliance, Cost, Access Risks).  </li>
+<li><strong>Custom Benchmark</strong>: Lets you select specific benchmark versions (e.g., CIS v1.5, CIS v2.0, FedRAMP, etc.).  </li>
+<li><strong>Logs and Status Updates</strong>: Always updated in real time during and after execution.  </li>
+<li><strong>Downloadable Outputs</strong>: Results can be exported as CSVs for:  </li>
+<li>ETL pipelines  </li>
+<li>Analytics and AI/ML workflows  </li>
 </ul>
 
 
