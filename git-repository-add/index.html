@@ -649,9 +649,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#repository-source-options" class="md-nav__link">
+  <a href="#navigate-to-this-page" class="md-nav__link">
     <span class="md-ellipsis">
-      Repository Source Options
+      Navigate to This Page
     </span>
   </a>
   
@@ -663,6 +663,48 @@
       Step-by-Step Guide
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-repository-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Repository Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configuration-paths-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Configuration Paths (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-submit" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Submit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1347,9 +1389,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#repository-source-options" class="md-nav__link">
+  <a href="#navigate-to-this-page" class="md-nav__link">
     <span class="md-ellipsis">
-      Repository Source Options
+      Navigate to This Page
     </span>
   </a>
   
@@ -1361,6 +1403,48 @@
       Step-by-Step Guide
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Step-by-Step Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-repository-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Repository Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configuration-paths-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Configuration Paths (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-submit" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Submit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1398,115 +1482,88 @@
 
 
 <h1 id="adding-git-repositories">Adding Git Repositories</h1>
-<p>Link your Git repositories to Cloudpie projects to integrate infrastructure code, queries, and policy configurations.<br />
-Repositories can be added manually or discovered automatically using the <strong>GitHub App</strong> integration.</p>
+<p>Connect your Git repositories to CloudPie projects for managing infrastructure code, queries, and policies.</p>
 <hr />
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Before adding a repository, ensure:</p>
 <ul>
-<li>You have <strong>an active project</strong> in Cloudpie  </li>
-<li>Your user account has permission to <strong>Add Git Repositories</strong>  </li>
-<li>If connecting private repositories:</li>
-<li>Either the <strong>GitHub App</strong> is registered (recommended)</li>
-<li>Or you have a <strong>valid Git repository URL</strong> and <strong>access token</strong></li>
+<li>An active project in CloudPie</li>
+<li>User with permissions to add Git repositories</li>
+<li>A GitHub App registered in CloudPie (Optional)</li>
+<li>Valid Git repository URL (HTTPS)</li>
+<li>Repository access token (Not needed if Github App is registered. Only if using manual token method for private repositories or if Github App is not registered)</li>
 </ul>
 <hr />
-<h2 id="repository-source-options">Repository Source Options</h2>
-<p>When adding a Git repository, you’ll first choose the <strong>repository source</strong>:</p>
+<h2 id="navigate-to-this-page">Navigate to This Page</h2>
 <ol>
-<li><strong>Search from GitHub App</strong> <em>(Recommended)</em>  </li>
-<li>Available only after GitHub App Registration is complete  </li>
-<li>Lets you browse repositories directly from your organization’s GitHub App installation  </li>
-<li>
-<p>Eliminates the need for manual URL and token entry</p>
-</li>
-<li>
-<p><strong>Enter Repository URL Manually</strong>  </p>
-</li>
-<li>Used when GitHub App is not configured or for repositories outside your organization  </li>
-<li>Requires entering the full HTTPS repository URL and, if private, an access token</li>
+<li>Open the <strong>Dashboard</strong>.</li>
+<li>Select your desired project.</li>
+<li>In the sidebar, click <strong>Git Repositories → Add Repository</strong>.</li>
 </ol>
 <p><strong><em>Example Image: Add Git Repository Page</em></strong><br />
-<img alt="Screenshot of Add Git Repository Form" src="../images/add_git_repo.png" /></p>
+<img alt="Add Git Repository Page" src="../images/add_git_repo.png" /></p>
 <hr />
 <h2 id="step-by-step-guide">Step-by-Step Guide</h2>
+<h3 id="1-repository-settings">1. Repository Settings</h3>
+<ul>
+<li>
+<p><strong>Repository URL</strong> (Required):<br />
+  Enter the full HTTPS URL of your repository.<br />
+  Example: <code>https://github.com/orgname/infrastructure.git</code></p>
+</li>
+<li>
+<p><strong>Branch Name</strong> (Optional):<br />
+  Specify the branch to use. Default is <code>main</code>.</p>
+</li>
+</ul>
+<blockquote>
+<p>If your organization has configured the GitHub App, repository discovery will automatically suggest available repositories for selection.</p>
+</blockquote>
+<hr />
+<h3 id="2-configuration-paths-optional">2. Configuration Paths (Optional)</h3>
+<p>Define optional paths if your repository contains specific configurations:</p>
+<ul>
+<li><strong>Terraform Configuration Path</strong> — Example: <code>/terraform</code></li>
+<li><strong>Steampipe Queries Path</strong> — Example: <code>/queries</code></li>
+<li><strong>Custom Powerpipe Benchmark Path</strong> — Example: <code>/benchmarks</code></li>
+<li><strong>Policy Governance Path</strong> — Example: <code>/policies</code></li>
+</ul>
+<p>Each path tells CloudPie where to locate specific components when running tasks or compliance scans.</p>
+<hr />
+<h3 id="3-authentication">3. Authentication</h3>
+<p>If the repository is <strong>private</strong>, authentication is required:</p>
+<ul>
+<li>
+<p><strong>Via GitHub App:</strong><br />
+  The preferred and most secure option. No token entry is needed once the GitHub App is registered.</p>
+</li>
+<li>
+<p><strong>Via Token (manual):</strong><br />
+  If no GitHub App is registered, you may use a Personal Access Token (PAT) with read permissions to the repository.<br />
+  Example: <code>ghp_xxxxxxxxxxxxxxxxxxxxx</code></p>
+</li>
+</ul>
+<hr />
+<h3 id="4-submit">4. Submit</h3>
 <ol>
-<li><strong>Access the Add Repository Page</strong></li>
-<li>From the <strong>Dashboard</strong>, select your target project  </li>
-<li>
-<p>In the sidebar, click <strong>Add Git Repository</strong> under the <strong>Projects</strong> section</p>
-</li>
-<li>
-<p><strong>Select Repository Source</strong></p>
-</li>
-<li>
-<p>Choose between:</p>
-<ul>
-<li><strong>Search from GitHub App (Recommended)</strong> — available if the GitHub App is configured  </li>
-<li><strong>Enter Repository URL Manually</strong> — used when no GitHub App connection exists  </li>
-</ul>
-</li>
-<li>
-<p><strong>Enter Repository Details</strong></p>
-</li>
-<li><strong>Repository URL</strong> <em>(Required for manual entry)</em><br />
-     Example: <code>https://github.com/organization/repository.git</code>  </li>
-<li><strong>Repository Name</strong> — Automatically generated from the URL  </li>
-<li>
-<p><strong>Branch Name (Optional)</strong><br />
-     Example: <code>main</code> or <code>dev</code></p>
-</li>
-<li>
-<p><strong>Specify Configuration Paths</strong> <em>(All Optional)</em><br />
-   Each path helps Cloudpie locate specific configuration files inside your repository:</p>
-</li>
-<li><strong>Terraform Configuration Path</strong> — Folder containing <code>.tf</code> or <code>.tfvars</code> files<br />
-     Example: <code>/terraform</code></li>
-<li><strong>Steampipe Queries Path</strong> — Folder for <code>.sql</code> or <code>.sp</code> query files<br />
-     Example: <code>/queries</code></li>
-<li><strong>Custom Powerpipe Benchmark Library Path</strong> — Folder for Powerpipe benchmark definitions<br />
-     Example: <code>/benchmarks</code></li>
-<li>
-<p><strong>Policy Governance Path</strong> — Folder for <code>.rego</code> or policy definition files<br />
-     Example: <code>/policies</code></p>
-</li>
-<li>
-<p><strong>Add Authentication (Optional)</strong>  </p>
-</li>
-<li>
-<p><strong>Repository Token</strong>  </p>
-<ul>
-<li>Required only for <strong>private repositories</strong> if you are not using the GitHub App  </li>
-<li>Example: a Personal Access Token with <code>repo</code> scope</li>
-</ul>
-</li>
-<li>
-<p><strong>Submit</strong>  </p>
-</li>
-<li>Click <strong>Add Repository</strong> to register the repository  </li>
-<li>The repository appears in your <strong>View Git Repositories</strong> list after successful submission</li>
+<li>Review all entries for correctness.</li>
+<li>Click <strong>Submit</strong> to save and connect the repository.</li>
+<li>The repository will now appear under the <strong>Git Repositories</strong> list for your project.</li>
 </ol>
 <hr />
 <h2 id="important-notes">Important Notes</h2>
 <ul>
-<li>The <strong>Repository Name</strong> is automatically generated based on the URL or GitHub App metadata.  </li>
-<li>All configuration path fields are optional, but incorrect paths can cause errors in automated runs.  </li>
-<li>Tokens are required only for manual private repositories.  </li>
-<li>If <strong>GitHub App</strong> is not yet configured, you’ll see a message:<br />
-<em>“Search from GitHub App (Not Configured)”</em><br />
-  To enable this, complete the setup in <strong>Settings → GitHub App Registration</strong>.</li>
+<li>Repository name is automatically derived from the URL.</li>
+<li>Invalid paths may cause CI/CD or compliance job failures.</li>
+<li>Using GitHub App registration is recommended for enhanced security and discovery.</li>
+<li>Manual tokens should only be used for testing or non-organization repositories.</li>
+<li>Removing a repository disconnects it from project automations but does not delete it from GitHub.</li>
 </ul>
 <hr />
 <h2 id="related-topics">Related Topics</h2>
 <ul>
-<li><a href="../github_app_registration/">GitHub App Registration</a> — Configure your organization’s GitHub App before using auto-discovery.  </li>
-<li><a href="../workspace-add/">Managing Workspaces</a> — Learn how linked repositories are used in workspaces.</li>
+<li><a href="../github_app_registration/">GitHub App Registration</a> — how to register a GitHub App for CloudPie.  </li>
+<li><a href="../adding-users/">Manage Users</a> — control which users can add or edit repositories.</li>
 </ul>
-<hr />
-<blockquote>
-<p><strong>Tip:</strong><br />
-Cloudpie recommends configuring your GitHub App for seamless repository discovery and authentication across projects.</p>
-</blockquote>
 
 
 

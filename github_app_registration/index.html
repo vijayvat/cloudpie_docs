@@ -578,15 +578,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
@@ -596,45 +587,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-github-app" class="md-nav__link">
+  <a href="#navigate-to-this-page" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a GitHub App
+      Navigate to This Page
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-the-github-app-in-cloudpie" class="md-nav__link">
+  <a href="#create-a-github-app-if-needed" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring the GitHub App in Cloudpie
+      Create a GitHub App (if needed)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#understanding-the-installation-status" class="md-nav__link">
+  <a href="#register-the-app-in-cloudpie" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding the Installation Status
+      Register the App in CloudPie
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#updating-information" class="md-nav__link">
+  <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Updating Information
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes-and-best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes and Best Practices
+      Notes
     </span>
   </a>
   
@@ -1356,15 +1338,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
@@ -1374,45 +1347,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#creating-a-github-app" class="md-nav__link">
+  <a href="#navigate-to-this-page" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a GitHub App
+      Navigate to This Page
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-the-github-app-in-cloudpie" class="md-nav__link">
+  <a href="#create-a-github-app-if-needed" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring the GitHub App in Cloudpie
+      Create a GitHub App (if needed)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#understanding-the-installation-status" class="md-nav__link">
+  <a href="#register-the-app-in-cloudpie" class="md-nav__link">
     <span class="md-ellipsis">
-      Understanding the Installation Status
+      Register the App in CloudPie
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#updating-information" class="md-nav__link">
+  <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Updating Information
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes-and-best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notes and Best Practices
+      Notes
     </span>
   </a>
   
@@ -1434,97 +1398,49 @@
 
 
 <h1 id="github-app-registration">GitHub App Registration</h1>
-<p>Set up GitHub App integration in Cloudpie to enable automatic repository discovery and authentication.<br />
-This integration allows users to securely select repositories without manually entering Git URLs or tokens.</p>
-<hr />
-<h3 id="overview">Overview</h3>
-<p>The <strong>GitHub App Registration</strong> page lets administrators connect a GitHub App created under their organization with Cloudpie.</p>
-<p>Once configured, Cloudpie can:
-- Discover repositories automatically<br />
-- Use GitHub App credentials for authentication<br />
-- Eliminate the need for individual user access tokens</p>
-<p><strong><em>Example Image: GitHub App Registration Page</em></strong><br />
-<img alt="Screenshot of GitHub App Registration Page" src="../images/github_app_registration.png" /></p>
+<p>Connect a GitHub App to CloudPie to enable secure repository discovery and authentication without personal access tokens.</p>
 <hr />
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Before you begin, ensure that:</p>
 <ul>
-<li>You have <strong>admin permissions</strong> in your GitHub organization  </li>
-<li>A <strong>GitHub App</strong> has been created in your organization  </li>
-<li>You have access to:</li>
-<li><strong>GitHub App ID (numeric)</strong></li>
-<li><strong>Private Key (PEM file)</strong></li>
-<li><strong>Installation ID</strong></li>
+<li>Organization admin access in CloudPie</li>
+<li>Admin access to your GitHub organization</li>
+<li>A GitHub App created (App ID, Private Key <code>.pem</code>, and Installation ID)</li>
 </ul>
-<p>If you haven’t created the GitHub App yet, follow the steps below.</p>
 <hr />
-<h2 id="creating-a-github-app">Creating a GitHub App</h2>
+<h2 id="navigate-to-this-page">Navigate to This Page</h2>
 <ol>
-<li>Go to your GitHub account and open:<br />
-<strong>Settings → Developer settings → GitHub Apps</strong></li>
-<li>Click <strong>New GitHub App</strong> and fill in the following details:</li>
-<li><strong>App name:</strong> e.g., <em>Cloudpie App Integration</em></li>
-<li><strong>Homepage URL:</strong> <code>https://&lt;your-cloudpie-domain&gt;</code></li>
-<li><strong>Webhook URL:</strong> <em>(optional)</em> — leave blank if not required</li>
-<li><strong>Permissions:</strong>  <ul>
-<li><em>Repository contents:</em> Read-only  </li>
-<li><em>Metadata:</em> Read-only</li>
-</ul>
-</li>
-<li><strong>Events:</strong> None required</li>
-<li>Click <strong>Create GitHub App</strong></li>
-<li>Download the <strong>Private Key (.pem)</strong> file immediately after creation</li>
-<li>Note down the <strong>App ID</strong> shown on the GitHub App details page</li>
+<li>Open the <strong>Dashboard</strong>.</li>
+<li>In the sidebar, click <strong>Settings → GitHub App Registration</strong>.</li>
+</ol>
+<p><strong><em>Example Image: GitHub App Registration Page</em></strong><br />
+<img alt="GitHub App Registration Page" src="../images/github_app_registration.png" /></p>
+<hr />
+<h2 id="create-a-github-app-if-needed">Create a GitHub App (if needed)</h2>
+<ol>
+<li>In GitHub, go to <strong>Settings → Developer settings → GitHub Apps → New GitHub App</strong>.</li>
+<li>Recommended permissions:</li>
+<li><strong>Repository contents:</strong> Read‑only</li>
+<li><strong>Metadata:</strong> Read‑only</li>
+<li>Download the <strong>Private Key (.pem)</strong>, and note the <strong>App ID</strong>.</li>
+<li>Install the app to your organization and note the <strong>Installation ID</strong> (from the URL).</li>
+</ol>
+<hr />
+<h2 id="register-the-app-in-cloudpie">Register the App in CloudPie</h2>
+<ol>
+<li>Enter your <strong>GitHub App ID</strong> (numeric).</li>
+<li>Paste the <strong>Private Key (.pem)</strong> into <strong>Update Private Key</strong>.</li>
+<li>Enter the <strong>Installation ID</strong> (e.g., from <code>https://github.com/settings/installations/84275342</code> → <code>84275342</code>).</li>
+<li>Click <strong>Register</strong> to save.</li>
 </ol>
 <blockquote>
-<p><strong>Reference:</strong><br />
-<a href="https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/registering-a-github-app">GitHub Docs – Creating a GitHub App</a></p>
+<p>You can re‑register at any time; CloudPie will overwrite old credentials.</p>
 </blockquote>
 <hr />
-<h2 id="configuring-the-github-app-in-cloudpie">Configuring the GitHub App in Cloudpie</h2>
-<p>Once your GitHub App is created, return to Cloudpie to register it.</p>
-<ol>
-<li>Open <strong>Settings → GitHub App Registration</strong>.  </li>
-<li>In the <strong>Update GitHub App ID</strong> section, enter your numeric <strong>App ID</strong>.  </li>
-<li>You can find this in GitHub under <em>Developer settings → GitHub Apps → Your App</em>.  </li>
-<li>In the <strong>Update Private Key</strong> section, paste the contents of your <code>.pem</code> file.  </li>
-<li>This is the key downloaded from GitHub.  </li>
-<li>In the <strong>Update Installation ID</strong> section, enter the installation number from your GitHub URL.  </li>
-<li>Example: if the URL is<br />
-<code>https://github.com/settings/installations/84275342</code><br />
-     then the installation ID is <strong>84275342</strong>.</li>
-<li>Click <strong>Register</strong> to save your configuration.</li>
-</ol>
-<p><strong><em>Example Image: GitHub App Registration Form</em></strong><br />
-<img alt="Screenshot of GitHub App Registration Form" src="../images/github_app_registration.png" /></p>
-<hr />
-<h2 id="understanding-the-installation-status">Understanding the Installation Status</h2>
-<p>At the top of the page, the <strong>Installation Status</strong> panel shows whether the GitHub App is currently configured:</p>
+<h2 id="notes">Notes</h2>
 <ul>
-<li><strong>Red warning box:</strong> The GitHub App is <strong>not configured</strong> or invalid.  </li>
-<li>Once valid credentials are registered, this section will show a success message in green (after configuration is completed).</li>
+<li>Keep the <code>.pem</code> key secure; rotate in GitHub if compromised and update here.</li>
+<li>After registration, projects can search repositories via the GitHub App; manual URL + token remains available.</li>
 </ul>
-<hr />
-<h2 id="updating-information">Updating Information</h2>
-<p>If any details change in your GitHub App (for example, if you regenerate the private key):</p>
-<ul>
-<li>Re-enter the <strong>App ID</strong>, <strong>Private Key</strong>, or <strong>Installation ID</strong> as needed.  </li>
-<li>Click <strong>Register</strong> again to update the stored configuration.</li>
-</ul>
-<p>You can safely re-register at any time — Cloudpie will overwrite previous credentials.</p>
-<hr />
-<h2 id="notes-and-best-practices">Notes and Best Practices</h2>
-<ul>
-<li>Store your <strong>PEM private key</strong> securely; if it’s lost, regenerate it in GitHub.  </li>
-<li>Avoid sharing the <strong>App ID</strong> or <strong>Installation ID</strong> publicly.  </li>
-<li>Make sure your GitHub App has <strong>read access</strong> to the repositories you want to connect to Cloudpie.  </li>
-<li>Each Cloudpie environment (e.g., staging, production) can have its own GitHub App configuration.</li>
-</ul>
-<hr />
-<blockquote>
-<p><strong>Tip:</strong><br />
-After successful configuration, Cloudpie will use the GitHub App to authenticate all repository actions securely, without storing personal access tokens.</p>
-</blockquote>
 
 
 
