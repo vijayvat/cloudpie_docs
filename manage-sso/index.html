@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../cloud-account-update/">
-      
-      
-        <link rel="next" href="../cloud-alerts/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Deleting a Cloud Account - Cloudpie User Guide</title>
+        <title>Manage Single Sign-On (SSO) - Cloudpie User Guide</title>
       
     
     
@@ -71,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#manage-single-sign-on-sso" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deleting a Cloud Account
+              Manage Single Sign-On (SSO)
             
           </span>
         </div>
@@ -768,8 +769,6 @@
       
   
   
-    
-  
   
   
     
@@ -781,11 +780,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
@@ -799,7 +800,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Cloud Accounts
@@ -894,17 +895,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../cloud-account-delete/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -913,7 +907,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1246,6 +1239,163 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enabling-sso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling SSO
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idp-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      IdP Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IdP Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-using-metadata-url-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Using Metadata URL (Recommended)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-manual-configuration-advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Manual Configuration (Advanced)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-roles-for-new-sso-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Roles for New SSO Users
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-provisioning-new-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Auto-Provisioning New Users
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Control
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saml-attribute-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAML Attribute Mapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Mapping
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-provider-sp-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Provider (SP) Metadata
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sso-management-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSO Management Actions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting (Optional)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1260,39 +1410,247 @@
                   
 
 
-  <h1>Deleting a Cloud Account</h1>
-
-<p>To Remove a cloud account from Cloudpie, follow these steps:</p>
+<h1 id="manage-single-sign-on-sso">Manage Single Sign-On (SSO)</h1>
+<p>Set up and manage SAML-based Single Sign-On (SSO) for your organization.<br />
+SSO lets users log in using existing corporate identities from providers such as <strong>Azure AD</strong>, <strong>Google Workspace</strong>, or <strong>Okta</strong> — without maintaining separate Cloudpie credentials.</p>
+<hr />
+<h3 id="overview">Overview</h3>
+<p>The <strong>Manage Single Sign-On</strong> page provides configuration for SAML metadata, user role defaults, group mappings, and access control.</p>
+<p><strong><em>Example Image: Manage SSO Page</em></strong><br />
+<img alt="Screenshot of Manage SSO Page" src="../images/manage_sso.png" /></p>
+<hr />
+<h2 id="enabling-sso">Enabling SSO</h2>
 <ol>
-<li><strong>Access the Project:</strong></li>
-<li>Navigate to the <strong>Dashboard</strong> and select the project containing the cloud account you want to delete.</li>
-<li>
-<p>Once inside the project, locate and click on the <strong>"View Cloud Accounts"</strong> menu in the sidebar.</p>
-</li>
-<li>
-<p><strong>Search for the Cloud Account:</strong></p>
-</li>
-<li>
-<p>Use the search bar to locate the specific cloud account by its <strong>Cloud Account ID</strong>.</p>
-</li>
-<li>
-<p><strong>Delete the Cloud Account:</strong></p>
-</li>
-<li>
-<p>In the search results, click on the <strong>Delete Cloud Account</strong> icon next to the account you want to remove.</p>
-</li>
-<li>
-<p><strong>Confirm Deletion:</strong></p>
-</li>
-<li>A confirmation box will appear. Carefully review the warning and confirm the deletion by clicking <strong>Confirm</strong>.</li>
+<li>Open <strong>Settings → Manage Single Sign-On</strong>.  </li>
+<li>Toggle <strong>Enable SSO</strong> to activate SAML authentication.  </li>
+<li>Once enabled, users can log in through your organization’s IdP.</li>
 </ol>
+<hr />
+<h2 id="idp-configuration">IdP Configuration</h2>
+<p>Cloudpie supports two setup methods depending on how your identity provider exposes metadata.</p>
+<h3 id="1-using-metadata-url-recommended">1. Using Metadata URL (Recommended)</h3>
+<ul>
+<li>Paste your <strong>IdP Metadata URL</strong>.  </li>
+<li>Cloudpie automatically fetches:</li>
+<li>Entity ID  </li>
+<li>SSO URL  </li>
+<li>SLO URL (if available)  </li>
+<li>X.509 Certificate  </li>
+</ul>
 <blockquote>
-<p><strong>Note:</strong> Deleting a cloud account is an <strong>irreversible action</strong>. All metadata and associations related to the cloud account will be permanently removed from Cloudpie. However:
-   - <strong>Your actual cloud resources will not be affected.</strong>
-   - This operation only removes the cloud account’s association within Cloudpie and cleans up its metadata.</p>
+<p><strong>Tip:</strong> Use this method for providers like Azure AD, Okta, or Google Workspace, as it automatically keeps configuration up to date.</p>
 </blockquote>
-<p><strong><em>Example Image: Delete/Remove Cloud Account</em></strong></p>
-<p><img alt="Screenshot of Delete Cloud Account Confirmation" src="../images/delete_cloud_account.png" /></p>
+<hr />
+<h3 id="2-manual-configuration-advanced">2. Manual Configuration (Advanced)</h3>
+<p>Expand <strong>“Or configure manually (advanced)”</strong> to enter details manually:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IdP Entity ID</strong></td>
+<td>Unique identifier of your IdP.</td>
+</tr>
+<tr>
+<td><strong>IdP SSO URL</strong></td>
+<td>Authentication endpoint.</td>
+</tr>
+<tr>
+<td><strong>IdP SLO URL (optional)</strong></td>
+<td>Logout endpoint (optional).</td>
+</tr>
+<tr>
+<td><strong>IdP Certificate (X.509)</strong></td>
+<td>Public certificate for signature verification.</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Example Image: Manual Configuration</em></strong><br />
+<img alt="Screenshot of Manual IdP Configuration" src="images/manage_sso_manual_config.png" /></p>
+<hr />
+<h2 id="default-roles-for-new-sso-users">Default Roles for New SSO Users</h2>
+<p>Select one or more <strong>default organization roles</strong> to automatically assign to new users when they first log in via SSO.  </p>
+<ul>
+<li>Leave this field empty to avoid automatic role assignment.  </li>
+<li>Roles can be modified later in <strong>User Management</strong>.</li>
+</ul>
+<p><strong><em>Example Image: Default Roles Selection</em></strong><br />
+<img alt="Screenshot of Default Roles Section" src="images/manage_sso_default_roles.png" /></p>
+<hr />
+<h2 id="auto-provisioning-new-users">Auto-Provisioning New Users</h2>
+<p>When <strong>Auto-provision new users</strong> is enabled:</p>
+<ul>
+<li>New users will be automatically created in Cloudpie the first time they log in using SSO.  </li>
+<li>If disabled, only existing users are permitted to log in through SSO.</li>
+</ul>
+<hr />
+<h2 id="access-control">Access Control</h2>
+<p>Control who can log in via SSO by selecting one of the access modes:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Open</strong></td>
+<td>Allow all users from the IdP to log in.</td>
+</tr>
+<tr>
+<td><strong>Email Domain</strong></td>
+<td>Restrict access to specific email domains (comma-separated).</td>
+</tr>
+<tr>
+<td><strong>Group Whitelist</strong></td>
+<td>Allow only selected SAML groups to access Cloudpie.</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Example Image: Access Control Options</em></strong><br />
+<img alt="Screenshot of Access Control Section" src="images/manage_sso_access_control.png" /></p>
+<hr />
+<h2 id="advanced-settings">Advanced Settings</h2>
+<h3 id="saml-attribute-mapping">SAML Attribute Mapping</h3>
+<p>Map attributes from your SAML assertion to Cloudpie user fields.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Email Attribute Name</strong></td>
+<td>The SAML attribute containing the user’s email address.</td>
+</tr>
+<tr>
+<td><strong>Groups Attribute Name (optional)</strong></td>
+<td>The attribute listing the user’s group memberships.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="group-mapping">Group Mapping</h3>
+<p>Link SAML groups from your IdP to Cloudpie organization roles.</p>
+<ol>
+<li>Toggle <strong>Enable Group Mapping</strong>.  </li>
+<li>For each mapping:</li>
+<li>Enter the <strong>SAML Group Name</strong> (e.g., “Engineering”).  </li>
+<li>Select one or more <strong>Cloudpie Roles</strong> (e.g., <code>org_editor</code>).  </li>
+<li>Click <strong>Add Mapping</strong> to save.</li>
+</ol>
+<p><strong><em>Example Image: Group Mapping Section</em></strong><br />
+<img alt="Screenshot of Group Mapping Section" src="images/manage_sso_group_mapping.png" /></p>
+<hr />
+<h2 id="service-provider-sp-metadata">Service Provider (SP) Metadata</h2>
+<p>Provide the following URLs to your Identity Provider when establishing the SAML trust:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SP Metadata URL</strong></td>
+<td>The metadata endpoint your IdP will use to import Cloudpie’s SAML configuration.</td>
+</tr>
+<tr>
+<td><strong>ACS (Assertion Consumer Service) URL</strong></td>
+<td>Endpoint that receives authentication responses from the IdP.</td>
+</tr>
+</tbody>
+</table>
+<p>Use the <strong>Copy</strong> button beside the SP Metadata URL to quickly copy the endpoint.</p>
+<p><strong><em>Example Image: SP Metadata Section</em></strong><br />
+<img alt="Screenshot of SP Metadata Section" src="images/manage_sso_sp_metadata.png" /></p>
+<hr />
+<h2 id="sso-management-actions">SSO Management Actions</h2>
+<p>At the bottom of the page, the following actions are available:</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Save Configuration</strong></td>
+<td>Save all current SSO settings.</td>
+</tr>
+<tr>
+<td><strong>Reset Form</strong></td>
+<td>Restore the configuration from the most recent save.</td>
+</tr>
+<tr>
+<td><strong>Check Status</strong></td>
+<td>Validate that the SSO configuration is complete and active.</td>
+</tr>
+<tr>
+<td><strong>Re-parse Metadata</strong></td>
+<td>Re-fetch and update metadata from the IdP.</td>
+</tr>
+<tr>
+<td><strong>Test SSO Login</strong></td>
+<td>Run a test login to verify SSO functionality.</td>
+</tr>
+<tr>
+<td><strong>Delete Config</strong></td>
+<td>Permanently remove the current SSO configuration.</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Example Image: Action Buttons Section</em></strong><br />
+<img alt="Screenshot of Action Buttons" src="images/manage_sso_actions.png" /></p>
+<hr />
+<h2 id="notes">Notes</h2>
+<ul>
+<li><strong>Re-Parsing Metadata:</strong> Refreshes SAML settings automatically if your IdP configuration changes.  </li>
+<li><strong>Group Mapping Validation:</strong> Invalid or non-existent roles are filtered out before saving.  </li>
+<li><strong>Safe Defaults:</strong> When SSO is disabled, all users must sign in using local credentials.  </li>
+<li><strong>Error Handling:</strong> Authentication failures during SSO redirect users back to the login page with a visible error message.</li>
+</ul>
+<hr />
+<h2 id="troubleshooting-optional">Troubleshooting (Optional)</h2>
+<blockquote>
+<p><strong>Common Issues</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Possible Cause</th>
+<th>Resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Login flickers or redirects without success</td>
+<td>Invalid ACS URL or certificate mismatch</td>
+<td>Verify metadata is updated and re-parse configuration.</td>
+</tr>
+<tr>
+<td>Metadata fetch fails</td>
+<td>IdP metadata URL inaccessible or requires authentication</td>
+<td>Use the manual configuration option.</td>
+</tr>
+<tr>
+<td>Users not assigned expected roles</td>
+<td>Group mapping disabled or incorrect role names</td>
+<td>Check mapping entries and ensure roles exist.</td>
+</tr>
+</tbody>
+</table>
+<hr />
 
 
 

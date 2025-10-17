@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../cloud-account-update/">
+        <link rel="prev" href="../project-delete/">
       
       
-        <link rel="next" href="../cloud-alerts/">
+        <link rel="next" href="../git-repository-add/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Deleting a Cloud Account - Cloudpie User Guide</title>
+        <title>Github integration - Cloudpie User Guide</title>
       
     
     
@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#github-app-registration" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deleting a Cloud Account
+              Github integration
             
           </span>
         </div>
@@ -524,10 +529,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../github_app_registration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Github integration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -536,6 +561,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-github-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a GitHub App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-github-app-in-cloudpie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring the GitHub App in Cloudpie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-installation-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Installation Status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes and Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -768,8 +876,6 @@
       
   
   
-    
-  
   
   
     
@@ -781,11 +887,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
@@ -799,7 +907,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Cloud Accounts
@@ -894,17 +1002,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../cloud-account-delete/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -913,7 +1014,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1246,6 +1346,79 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-github-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a GitHub App
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-github-app-in-cloudpie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring the GitHub App in Cloudpie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-the-installation-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the Installation Status
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updating Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes and Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1260,39 +1433,98 @@
                   
 
 
-  <h1>Deleting a Cloud Account</h1>
-
-<p>To Remove a cloud account from Cloudpie, follow these steps:</p>
+<h1 id="github-app-registration">GitHub App Registration</h1>
+<p>Set up GitHub App integration in Cloudpie to enable automatic repository discovery and authentication.<br />
+This integration allows users to securely select repositories without manually entering Git URLs or tokens.</p>
+<hr />
+<h3 id="overview">Overview</h3>
+<p>The <strong>GitHub App Registration</strong> page lets administrators connect a GitHub App created under their organization with Cloudpie.</p>
+<p>Once configured, Cloudpie can:
+- Discover repositories automatically<br />
+- Use GitHub App credentials for authentication<br />
+- Eliminate the need for individual user access tokens</p>
+<p><strong><em>Example Image: GitHub App Registration Page</em></strong><br />
+<img alt="Screenshot of GitHub App Registration Page" src="../images/github_app_registration.png" /></p>
+<hr />
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before you begin, ensure that:</p>
+<ul>
+<li>You have <strong>admin permissions</strong> in your GitHub organization  </li>
+<li>A <strong>GitHub App</strong> has been created in your organization  </li>
+<li>You have access to:</li>
+<li><strong>GitHub App ID (numeric)</strong></li>
+<li><strong>Private Key (PEM file)</strong></li>
+<li><strong>Installation ID</strong></li>
+</ul>
+<p>If you haven’t created the GitHub App yet, follow the steps below.</p>
+<hr />
+<h2 id="creating-a-github-app">Creating a GitHub App</h2>
 <ol>
-<li><strong>Access the Project:</strong></li>
-<li>Navigate to the <strong>Dashboard</strong> and select the project containing the cloud account you want to delete.</li>
-<li>
-<p>Once inside the project, locate and click on the <strong>"View Cloud Accounts"</strong> menu in the sidebar.</p>
+<li>Go to your GitHub account and open:<br />
+<strong>Settings → Developer settings → GitHub Apps</strong></li>
+<li>Click <strong>New GitHub App</strong> and fill in the following details:</li>
+<li><strong>App name:</strong> e.g., <em>Cloudpie App Integration</em></li>
+<li><strong>Homepage URL:</strong> <code>https://&lt;your-cloudpie-domain&gt;</code></li>
+<li><strong>Webhook URL:</strong> <em>(optional)</em> — leave blank if not required</li>
+<li><strong>Permissions:</strong>  <ul>
+<li><em>Repository contents:</em> Read-only  </li>
+<li><em>Metadata:</em> Read-only</li>
+</ul>
 </li>
-<li>
-<p><strong>Search for the Cloud Account:</strong></p>
-</li>
-<li>
-<p>Use the search bar to locate the specific cloud account by its <strong>Cloud Account ID</strong>.</p>
-</li>
-<li>
-<p><strong>Delete the Cloud Account:</strong></p>
-</li>
-<li>
-<p>In the search results, click on the <strong>Delete Cloud Account</strong> icon next to the account you want to remove.</p>
-</li>
-<li>
-<p><strong>Confirm Deletion:</strong></p>
-</li>
-<li>A confirmation box will appear. Carefully review the warning and confirm the deletion by clicking <strong>Confirm</strong>.</li>
+<li><strong>Events:</strong> None required</li>
+<li>Click <strong>Create GitHub App</strong></li>
+<li>Download the <strong>Private Key (.pem)</strong> file immediately after creation</li>
+<li>Note down the <strong>App ID</strong> shown on the GitHub App details page</li>
 </ol>
 <blockquote>
-<p><strong>Note:</strong> Deleting a cloud account is an <strong>irreversible action</strong>. All metadata and associations related to the cloud account will be permanently removed from Cloudpie. However:
-   - <strong>Your actual cloud resources will not be affected.</strong>
-   - This operation only removes the cloud account’s association within Cloudpie and cleans up its metadata.</p>
+<p><strong>Reference:</strong><br />
+<a href="https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/registering-a-github-app">GitHub Docs – Creating a GitHub App</a></p>
 </blockquote>
-<p><strong><em>Example Image: Delete/Remove Cloud Account</em></strong></p>
-<p><img alt="Screenshot of Delete Cloud Account Confirmation" src="../images/delete_cloud_account.png" /></p>
+<hr />
+<h2 id="configuring-the-github-app-in-cloudpie">Configuring the GitHub App in Cloudpie</h2>
+<p>Once your GitHub App is created, return to Cloudpie to register it.</p>
+<ol>
+<li>Open <strong>Settings → GitHub App Registration</strong>.  </li>
+<li>In the <strong>Update GitHub App ID</strong> section, enter your numeric <strong>App ID</strong>.  </li>
+<li>You can find this in GitHub under <em>Developer settings → GitHub Apps → Your App</em>.  </li>
+<li>In the <strong>Update Private Key</strong> section, paste the contents of your <code>.pem</code> file.  </li>
+<li>This is the key downloaded from GitHub.  </li>
+<li>In the <strong>Update Installation ID</strong> section, enter the installation number from your GitHub URL.  </li>
+<li>Example: if the URL is<br />
+<code>https://github.com/settings/installations/84275342</code><br />
+     then the installation ID is <strong>84275342</strong>.</li>
+<li>Click <strong>Register</strong> to save your configuration.</li>
+</ol>
+<p><strong><em>Example Image: GitHub App Registration Form</em></strong><br />
+<img alt="Screenshot of GitHub App Registration Form" src="images/github_app_registration_form.png" /></p>
+<hr />
+<h2 id="understanding-the-installation-status">Understanding the Installation Status</h2>
+<p>At the top of the page, the <strong>Installation Status</strong> panel shows whether the GitHub App is currently configured:</p>
+<ul>
+<li><strong>Red warning box:</strong> The GitHub App is <strong>not configured</strong> or invalid.  </li>
+<li>Once valid credentials are registered, this section will show a success message in green (after configuration is completed).</li>
+</ul>
+<hr />
+<h2 id="updating-information">Updating Information</h2>
+<p>If any details change in your GitHub App (for example, if you regenerate the private key):</p>
+<ul>
+<li>Re-enter the <strong>App ID</strong>, <strong>Private Key</strong>, or <strong>Installation ID</strong> as needed.  </li>
+<li>Click <strong>Register</strong> again to update the stored configuration.</li>
+</ul>
+<p>You can safely re-register at any time — Cloudpie will overwrite previous credentials.</p>
+<hr />
+<h2 id="notes-and-best-practices">Notes and Best Practices</h2>
+<ul>
+<li>Store your <strong>PEM private key</strong> securely; if it’s lost, regenerate it in GitHub.  </li>
+<li>Avoid sharing the <strong>App ID</strong> or <strong>Installation ID</strong> publicly.  </li>
+<li>Make sure your GitHub App has <strong>read access</strong> to the repositories you want to connect to Cloudpie.  </li>
+<li>Each Cloudpie environment (e.g., staging, production) can have its own GitHub App configuration.</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>Tip:</strong><br />
+After successful configuration, Cloudpie will use the GitHub App to authenticate all repository actions securely, without storing personal access tokens.</p>
+</blockquote>
 
 
 
